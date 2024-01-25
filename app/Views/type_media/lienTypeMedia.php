@@ -7,8 +7,8 @@
     </head>
     <body>
         <h1> <strong>BDD : TYPES MEDIAS  </strong></h1>
-        <a href="listeTypeMedia.php">consultation des Types des medias </a><br>
-        <a href="addTypeMedia.php">consultation des Types des medias </a><br>
+        <a href="/type_media/liste">consultation des Types des medias </a><br>
+        <a href="/type_media/add"> consultation </a><br>
 
     </body>
 </html>
