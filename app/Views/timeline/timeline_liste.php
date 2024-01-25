@@ -22,8 +22,9 @@ th
 </style>
 
 </head>
+
 <body>
-    <header>
+    
         <h1>" Lise des enregistrements "</h1>
 
         <a href="/timeline/"> Menu </a> <br>
