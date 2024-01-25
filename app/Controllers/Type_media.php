@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-class Type_media extends BaseController
+class type_media extends BaseController
 {
     public function index(): string
     {
