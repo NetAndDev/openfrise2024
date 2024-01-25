@@ -8,16 +8,16 @@ class Licence extends BaseController
 {
     // ...
 
-    public function index(): string
+    public function menu()
     {
     return view('licence/menulicence');
     }
     
-    public function add (): string
+    public function add()
     {
     return view('licence/addlicence');
     }
-    public function liste (): string
+    public function liste()
     {
     return view('licence/listelicence');
     }

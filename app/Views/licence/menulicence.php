@@ -1,0 +1,1 @@
+<a href="/licence/liste">la liste des licences</a>
