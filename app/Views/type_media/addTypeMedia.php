@@ -1,25 +1,72 @@
 <!DOCTYPE html>
-
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title> BDD TYPES MEDIAS  </title>
-    </head>
-    <body>
-    <h1><strong> BDD TYPES MEDIAS </strong></h1>
-       <form action="lienTypeMedia.php" method="post">
+<head>
+  <meta charset="UTF-8">
+  <title>BDD TYPES MEDIAS</title>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
 
-        <label for="Type-Media">choisir un type</label>
-        <select name="Type-Media" id="Type-Media">
-            <option value="">-- Type de Media --</option>
-            
-             </select><br><br>
-        <input type="submit" value="Rechercher">
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
 
-    </form>
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
 
-       
+    input[type="text"] {
+      width: 300px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+    }
 
-        
-    </body>
+    select {
+      width: 300px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+    }
+
+    input[type="submit"] {
+      background-color: #007bff;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+<form action="lienTypeMedia.php" method="post">
+
+  <h1>"Ajouter un enregistrement"</h1>
+
+  <label>Code type média</label>
+  <input type="text" name="Code type média">
+
+  <label>label</label>
+  <input type="text" name="label">
+
+  <label>icon</label>
+  <input type="text" name="icon">
+
+  <label>icon_ori</label>
+  <input type="text" name="icon_ori">
+
+  <label for="Type-Media">Choisir le type de votre enregistrement</label>
+  <select name="Type-Media" id="Type-Media">
+    <option value="image">Image</option>
+    <option value="video">Vidéo</option>
+    <option value="audio">Audio</option>
+    <option value="document">Document</option>
+  </select>
+
+  <input type="submit" value="Envoyer">
+</form>
+</body>
 </html>
