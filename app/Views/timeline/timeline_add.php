@@ -7,9 +7,9 @@
 </head>
 <body>
     <header>
-        <h1>"Add"</h1>
+        <h1>"ADD"</h1>
 
-
+        <a href="/timeline/"> Menu </a>
 
 
 
