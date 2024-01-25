@@ -6,6 +6,7 @@ class Hyphen extends BaseController
 {
     public function index(): string
     {
-        return view('hyphen');
+        return view('hyphen_menu');
     }
 }
+?>
