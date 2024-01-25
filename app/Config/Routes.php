@@ -9,5 +9,5 @@ $routes->get('/', 'Home::index');
 
 use App\Controllers\Pages;
 
-$routes->get('pages', [Pages::class, 'index']);
+$routes->get('/galleries', 'Galleries::galleries');
 $routes->get('(:segment)', [Pages::class, 'view']);
