@@ -4,8 +4,7 @@
 <title>Chosis</title>
 </head>
 <body>
-    <a href="team_liste.php">Liste</a>
-    <a href="team_add.php">Add</a>
-
+    <a href="/team/liste">Liste</a>
+    <a href="/team/add">Add</a>
 </body>
 </html>
