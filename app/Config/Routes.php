@@ -7,7 +7,5 @@ use CodeIgniter\Router\RouteCollection;
  */
 $routes->get('/', 'Home::index');
 
-use App\Controllers\Pages;
 
-$routes->get('/galleries', 'Galleries::galleries');
-$routes->get('(:segment)', [Pages::class, 'view']);
+$routes->get('/galleries', 'Galleries::menu');
