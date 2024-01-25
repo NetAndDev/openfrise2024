@@ -7,5 +7,5 @@ use CodeIgniter\Router\RouteCollection;
  */
 $routes->get('/', 'Home::index');
 $routes->get('/event', 'Event::index');
-$routes->get('/event/event_list', 'Event::list');
+$routes->get('/event/list', 'Event::list');
 $routes->get('/event/add', 'Event::add');
