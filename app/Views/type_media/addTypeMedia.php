@@ -3,9 +3,10 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title></title>
+        <title> BDD TYPES MEDIAS  </title>
     </head>
     <body>
+    <h1><strong> BDD TYPES MEDIAS </strong></h1>
        <form action="lienTypeMedia.php" method="post">
 
         <label for="Type-Media">choisir un type</label>
