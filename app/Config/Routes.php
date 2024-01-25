@@ -8,4 +8,4 @@ use CodeIgniter\Router\RouteCollection;
 $routes->get('/', 'Home::index');
 
 
-$routes->get('/galleries', 'Galleries::menu');
+$routes->get('/gallerie', 'Gallerie::menu');
