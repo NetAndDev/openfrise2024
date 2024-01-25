@@ -22,3 +22,4 @@ class Pages extends BaseController
             . view('templates/footer');
     }
 }
+echo 'ekko';
