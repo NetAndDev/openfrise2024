@@ -6,17 +6,17 @@ class Right extends BaseController
 {
     public function add()
     {
-        return view('right_add');
+        return view('/right/right_add');
     }
 
     public function list()
     {
-        return view('right_list');
+        return view('/right/right_list');
     }
 
     public function menu()
     {
-        return view('right_menu');
+        return view('/right/right_menu');
     }
 
 }
