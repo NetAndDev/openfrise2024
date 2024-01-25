@@ -6,7 +6,19 @@
         <title></title>
     </head>
     <body>
-        <h1> <strong>BDD : TYPES MEDIAS  </strong></h1>
-        <a href="/type_media/liste">consultation des Types des medias </a><br>
+       <form action="lienTypeMedia.php" method="post">
+
+        <label for="Type-Media">choisir un type</label>
+        <select name="Type-Media" id="Type-Media">
+            <option value="">-- Type de Media --</option>
+            
+             </select><br><br>
+        <input type="submit" value="Rechercher">
+
+    </form>
+
+       
+
+        
     </body>
 </html>
