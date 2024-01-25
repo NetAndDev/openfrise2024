@@ -4,22 +4,19 @@ namespace App\Controllers;
 
 class Right extends BaseController
 {
-    public function index()
+    public function add()
     {
-        return view('welcome_message');
+        return view('right_add');
     }
 
-    public function view($page = 'home')
+    public function list()
     {
-        if (! is_file(APPPATH . 'Views/right/' . $page . '.php')) {
-            // Whoops, we don't have a page for that!
-            throw new PageNotFoundException($page);
-        }
-
-        $data['title'] = ucfirst($page); // Capitalize the first letter
-
-        return view('templates/header', $data)
-            . view('right/' . $page)
-            . view('templates/footer');
+        return view('right_list');
     }
+
+    public function menu()
+    {
+        return view('right_menu');
+    }
+
 }
