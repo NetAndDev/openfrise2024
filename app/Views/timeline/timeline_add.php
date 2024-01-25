@@ -6,7 +6,6 @@
 
 </head>
 <body>
-    <header>
 
       <h1>" Ajouter un enregistrement "</h1>
 
@@ -40,6 +39,6 @@
         <input type="submit" Value="Envoyer">
     </form>
 
-</body>
+
     </body>
 </html>
