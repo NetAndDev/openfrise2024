@@ -1,1 +1,7 @@
-<h1>titre</h1>
+<!doctype html>
+<htlm>
+<head>
+</head>
+<body>
+    <h1>Page d'acceuil</h1>
+</body>
