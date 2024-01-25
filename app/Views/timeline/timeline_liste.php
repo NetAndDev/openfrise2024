@@ -43,8 +43,7 @@ th
     <th> date_update </th>
     <th> code_licence </th>
     </tr>'; 
-
-    
+   
 ?>
         
     </body>
