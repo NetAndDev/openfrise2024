@@ -1,26 +1,24 @@
-
 <?php
 
 namespace App\Controllers;
 
 use CodeIgniter\Exceptions\PageNotFoundException; // Add this line
 
-class Pages extends BaseController
+class Licence extends BaseController
 {
     // ...
 
-    public function view($page = 'home')
+    public function index(): string
     {
-        if (! is_file(APPPATH . 'Views/pages/' . $page . '.php')) {
-            // Whoops, we don't have a page for that!
-            throw new PageNotFoundException($page);
-        }
-
-        $data['title'] = ucfirst($page); // Capitalize the first letter
-
-        return view('licence/addlicence', $data)
-            . view('pages/' . $page)
-            . view('licence/listelicence')
-            . view('licence/menulicence');
+    return view('licence/menulicence');
+    }
+    
+    public function add (): string
+    {
+    return view('licence/addlicence');
+    }
+    public function liste (): string
+    {
+    return view('licence/listelicence');
     }
 }
