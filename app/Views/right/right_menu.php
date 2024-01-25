@@ -5,8 +5,9 @@
 </head>
 <body>
     <div>
-        <li><a href="/right/right_list.php">Ajout d'utilisateurs</a></li>
-        <li><a href="/right/right_add.php">Liste des utilisateurs</a></li>
+        <h1>Menu d'attribution des rôles</h1>
+        <li><a href="/right/add">Attribuer des rôles</a></li>
+        <li><a href="/right/list">Liste des utilisateurs</a></li>
     </div>
 </body>
 </html>

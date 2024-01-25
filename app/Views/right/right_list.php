@@ -1,10 +1,9 @@
 <!doctype html>
 <html>
 <head>
-    <title>Menu</title>
+    <title>Liste</title>
 </head>
 <body>
-
-    <h1></h1>
+    <h1>Liste</h1>
 </body>
 </html>

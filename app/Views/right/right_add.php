@@ -1,10 +1,9 @@
 <!doctype html>
 <html>
 <head>
-    <title>Ajouter des utilisateur</title>
+    <title>Attribuer des rôles</title>
 </head>
 <body>
-
-    <h1></h1>
+    <h1>Attribuer des rôles</h1>
 </body>
 </html>
