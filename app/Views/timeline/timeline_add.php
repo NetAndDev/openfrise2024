@@ -19,7 +19,7 @@
     
       </select><br><br>
 
-      <input type="submit" value="Ajouter">
+      <input type="submit" value="Envoyer">
 
 
 
