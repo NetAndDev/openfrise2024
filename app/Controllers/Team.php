@@ -8,4 +8,13 @@ class TEAM extends BaseController
     {
         return view('Team');
     }
+    public function index(): string
+    {
+        return view('team/team_menu');
+    }
+
+    public function add (): string
+    {
+        return view('team/team_liste');
+    }
 }
