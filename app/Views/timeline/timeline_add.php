@@ -29,7 +29,7 @@
         <input type="texte" name="comment"><br>
         <label>date_create</label><br>
         <input type="texte" name="date_create"><br>
-        <label>date_uptade</label><br>
+        <label>date_update</label><br>
         <input type="texte" name="date_update"><br>
         <label>code_licence</label><br>
         <select name="code_licence"><br>
@@ -39,6 +39,7 @@
         </select><br>
         <input type="submit" Value="Envoyer">
     </form>
+
 </body>
     </body>
 </html>
