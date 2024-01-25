@@ -19,7 +19,7 @@
     }
 
     thead {
-      background-color: #f2f2f2;
+      background-color: #FF0000;
     }
   </style>
 </head>

@@ -33,7 +33,7 @@
     }
 
     input[type="submit"] {
-      background-color: #007bff;
+      background-color: #FF0000;
       color: white;
       padding: 10px 20px;
       border: none;
@@ -44,7 +44,7 @@
 <body>
 <form action="lienTypeMedia.php" method="post">
 
-  <h1>"Ajouter un enregistrement"</h1>
+  <h1>Ajouter votre enregistrement</h1>
 
   <label>Code type média</label>
   <input type="text" name="Code type média">
@@ -57,6 +57,16 @@
 
   <label>icon_ori</label>
   <input type="text" name="icon_ori">
+
+  <label>comment</label>
+  <input type="text" name="comment">
+
+  <label>date_create</label>
+  <input type="text" name="date_create">
+
+  <label>date_update</label>
+  <input type="text" name="date_update">
+
 
   <label for="Type-Media">Choisir le type de votre enregistrement</label>
   <select name="Type-Media" id="Type-Media">
