@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>list</title>
+    <title>liste</title>
 </head>
 <style>
 table, 
@@ -39,7 +39,7 @@ echo '  <table>
     <th> date_update </th>
     </tr>'; 
 
-    
+
 
 ?>
 
