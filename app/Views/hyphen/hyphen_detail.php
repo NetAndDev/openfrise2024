@@ -11,7 +11,7 @@
         {
             if (is_array($item))
             {
-                echo '<p>'.esc($item['id_hyphen']).'</p>'."\n";
+                echo '<p>'.esc($item['id_hyphen']).' '.esc($item['id_timeline']).'</p>'."\n";
             }
         }
      }
