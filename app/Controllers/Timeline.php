@@ -32,7 +32,7 @@ class Timeline extends BaseController
         }
 
         $data['title'] = ucfirst($page);  // Capitalize the first letter
-        $data['numero'] = 123;
+        $data[''] = 'Tahia Djazair';
 
         return view('timeline/timeline_' . $page, $data); // $data: ['numero' => 123] 
      }
@@ -49,7 +49,7 @@ class Timeline extends BaseController
             // Whoops, we don't have a page for that!
             throw new PageNotFoundException($page);
         }
-        return view('timeline/timeline_' . $page, $data);
+        return view('timeline/timeline_' . $page, $data); 
      
      }
  }    

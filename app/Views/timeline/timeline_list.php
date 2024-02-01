@@ -25,9 +25,11 @@ th
 
 <body>
     
-        <h1>" Liste des enregistrements "</h1>
-
         <a href="/timeline/"> Menu </a> <br>
+
+        <h1>" Liste des enregistrements "</h1>
+        
+
 
 <?php
         echo '<table>
@@ -44,6 +46,7 @@ th
     </tr>'; 
    
 ?>
+    /* <?= 'Tahia Djazair' ?> */
     
         
     </body>

@@ -6,7 +6,7 @@ use CodeIgniter\Model;
 
 class TimelineModel extends Model
 {
-    protected $table = 'Timelines';
+    protected $table = 'TIMELINES';
 
     public function getTimeline($id = false)
     {
@@ -17,4 +17,4 @@ class TimelineModel extends Model
         return $this->where(['id_timeline' => $id])->first();
     }
 
-}
+} 

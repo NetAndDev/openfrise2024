@@ -7,9 +7,10 @@
 </head>
 <body>
 
+      <a href="/timeline/"> Menu </a> <br>  
+
       <h1>" Ajout d'un enregistrement "</h1>
 
-      <a href="/timeline/"> Menu </a> <br>
 
     <form action="#" method="post">
         <label>label</label><br>
@@ -21,7 +22,7 @@
         <label>date_end</label><br>
         <input type="texte" name="date_end"><br>
         <label>is_public</label><br>
-        <input type="texte" name="is_public"><br>
+        <input type="texte" name="is_public"><br> 
         <label>comment</label><br>
         <input type="texte" name="comment"><br>
         <label>code_licence</label><br>

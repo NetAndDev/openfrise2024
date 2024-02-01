@@ -10,8 +10,11 @@
         <h1>"Menu"</h1>
      <a href="/timeline/list">List</a>
      <a href="/timeline/add">Add</a>
+     <a href="/timeline/detail">Detail</a>
      
 
-     <?= 123 ?>
+     
+
+
     </body>
 </html> 

@@ -3,6 +3,8 @@
 <head>
   <meta charset="utf-8">
   <title>Timeline</title>
+ 
+  <a href="/timeline/"> Menu </a> <br> 
 
   <?php
      if (! empty($timeline) && is_array($timeline))
@@ -11,15 +13,13 @@
         {
             if (is_array($item))
             {
-                echo '<p>'.esc($item[login]).'</p>'."\n";
+                echo '<p>'.esc($item['id_timeline']).'</p>'."\n";
             }
-        }
+        } 
      }
-
      else 
-
      {
-        echo '<p> Aucun utilisateur trouvé .</p>'."\n"; 
+        echo '<p> Aucune frise trouvée </p>'."\n"; 
      } 
   ?> 
 
