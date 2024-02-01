@@ -5,7 +5,10 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
-$routes->get('/', 'Home::index');
-$routes->get('/timeline', 'Timeline::index');
-$routes->get('/timeline/list', 'Timeline::list');
-$routes->get('/timeline/add', 'Timeline::add'); 
+
+ $routes->get('/', 'Home::index');
+
+use App\Controllers\Timeline;
+
+$routes->get('timeline', 'Timeline::index');
+$routes->get('timeline/(:segment)', [Timeline::class, 'display']);  
