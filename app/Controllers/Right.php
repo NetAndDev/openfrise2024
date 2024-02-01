@@ -4,10 +4,10 @@ namespace App\Controllers;
 
 class Right extends BaseController
 {
-    public function index(): string
+    /*public function index(): string
     {
-        return view('right/right_index');
-    }
+     return view('right/right_index');
+}
 
     public function add()
     {
@@ -22,7 +22,21 @@ class Right extends BaseController
     public function menu()
     {
         return view('right/right_menu');
+    }*/
+    public function display($page = 'menu')
+    {
+        if (! is_file(APPPATH . 'Views/right/right_' . $page . '.php')) {
+            // Whoops, we don't have a page for that!
+            throw new PageNotFoundException($page);
+        }
+
+        //$data['title'] = ucfirst($page); // Capitalize the first letter
+
+        return view('right/right_' . $page);
     }
+
+
+
 
     public function find($id_user = false)
     {
