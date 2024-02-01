@@ -23,16 +23,34 @@ class Timeline extends BaseController
         return view('timeline/timeline_menu');
     }
     
-    public function display(): string
+    public function display($page = 'menu')
      { 
-        $page = 'menu';
 
         if (! is_file(APPPATH . 'Views/timeline/timeline_' . $page . '.php')) {
             // Whoops, we don't have a page for that!
             throw new PageNotFoundException($page);
         }
 
-        return display('timeline/timeline_' .$page);
+        $data['title'] = ucfirst($page);  // Capitalize the first letter
+        $data['numero'] = 123;
+
+        return view('timeline/timeline_' . $page, $data); // $data: ['numero' => 123] 
+     }
+
+    public function find($id_timeline = false)
+     {
+        $model = model(TimelineModel::class);
+
+        $data['timeline'] = $model->getTimeline($id_timeline);
+
+        $page = 'detail';
+
+        if (! is_file(APPPATH . 'Views/timeline/timeline_' . $page . '.php')) {
+            // Whoops, we don't have a page for that!
+            throw new PageNotFoundException($page);
+        }
+        return view('timeline/timeline_' . $page, $data);
+     
      }
  }    
     
