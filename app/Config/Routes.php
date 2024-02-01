@@ -8,4 +8,4 @@ use CodeIgniter\Router\RouteCollection;
 $routes->get('/', 'Home::index');
 $routes->get('/hyphen', 'Hyphen::index');
 $routes->get('/hyphen/add', 'Hyphen::add');
-$routes->get('/hyphen/liste', 'Hyphen::list');
+$routes->get('/hyphen/list', 'Hyphen::list');
