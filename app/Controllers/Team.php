@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-class TEAM extends BaseController
+class Team extends BaseController
 {
     public function index(): string
     {
