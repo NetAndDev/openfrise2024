@@ -54,6 +54,7 @@
 
   <label>icon</label>
   <input type="text" name="icon">
+  <input type="file" name="parcourir" id="parcourir" accept=".doc,.docx,.pdf,.xls,.xlsx">
 
   <label>icon_ori</label>
   <input type="text" name="icon_ori">
@@ -61,21 +62,9 @@
   <label>comment</label>
   <input type="text" name="comment">
 
-  <label>date_create</label>
-  <input type="text" name="date_create">
-
-  <label>date_update</label>
-  <input type="text" name="date_update">
 
 
-  <label for="Type-Media">Choisir le type de votre enregistrement</label>
-  <select name="Type-Media" id="Type-Media">
-    <option value="image">Image</option>
-    <option value="video">Vidéo</option>
-    <option value="audio">Audio</option>
-    <option value="document">Document</option>
-  </select>
-
+  
   <input type="submit" value="Envoyer">
 </form>
 </body>
