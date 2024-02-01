@@ -10,15 +10,15 @@ class Licence extends BaseController
 
     public function menu()
     {
-    return view('licence/menulicence');
+    return view('licence/license_menu');
     }
     
     public function add()
     {
-    return view('licence/addlicence');
+    return view('licence/license_add');
     }
     public function liste()
     {
-    return view('licence/listelicence');
+    return view('licence/licence_list');
     }
 }
