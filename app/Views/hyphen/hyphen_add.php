@@ -7,9 +7,9 @@
 
 <?php
 
-    $db = \Config\Database::connect();
+    /*$db = \Config\Database::connect();
     $query   = $db->query('SELECT * FROM BDD_HYPHENS');
-    $results = $query->getResult();
+    $results = $query->getResult();*/
 
             echo 'Listes :' . '<br>';
 

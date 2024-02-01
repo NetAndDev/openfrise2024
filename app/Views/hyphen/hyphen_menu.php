@@ -7,6 +7,7 @@
 <h1><strong>MENU</strong></h1>
 <a href="/hyphen/list">Liste</a>
 <a href="/hyphen/add">Add</a>
+<a href="/hyphen/find">find</a>
 
 </body>
 </html>

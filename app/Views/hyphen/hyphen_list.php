@@ -30,6 +30,8 @@ h1 {
 
 echo '  <table>
     <tr>
+    <th> id_timeline </th>
+    <th> id_hyphen </th>
     <th> date_begin </th>
     <th> date_end </th>
     <th> comment </th>
