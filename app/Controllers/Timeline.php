@@ -2,6 +2,10 @@
 
 namespace App\Controllers;
 
+use CodeIgniter\Exceptions\PageNotFoundException;
+
+use App\Models\TimelineModel;
+
 class Timeline extends BaseController
 /*{
     public function index(): string
