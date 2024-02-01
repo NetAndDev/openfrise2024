@@ -2,20 +2,19 @@
 
 namespace App\Controllers;
 
+use CodeIgniter\Exceptions\PageNotFoundException;
+
 class Team extends BaseController
 {
-    public function index(): string
-    {
-        return view('team/team_menu');
-    }
-    public function liste(): string
-    {
-        return view('team/team_liste');
-    }
+    public function display($page="menu")   
+     {
+        if(! is_file(APPPATH. 'Views/team/team_'.$page.'.php')){
+            throw new PageNotFoundException($page);
+        }
 
-    public function add (): string
-    {
-        return view('team/team_add');
+        $data ['title'] = ucfirst($page);
+        $data ['numero'] = 123;
+        return view('team/team_'. $page,$data); //$data [(numéro => 123)] 
     }
 
 }

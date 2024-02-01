@@ -1,11 +1,9 @@
 <?php
 
-use CodeIgniter\Router\RouteCollection;
+use App\Controllers\Team;
 
 /**
  * @var RouteCollection $routes
  */
-$routes->get('/', 'Home::index');
-$routes->get('/team', 'Team::index');
-$routes->get('/team/liste', 'Team::liste');
-$routes->get('/team/add', 'Team::add');
+$routes->get('team', [Team::class,'display']);
+$routes->get('team/(:segment)', [Team::class,'display']);

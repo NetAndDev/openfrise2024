@@ -2,38 +2,32 @@
 <html lang="fr">
 <head>
     <title>ADD</title>
+    <style>
+        table,
+        th,
+        td {
+            border-collapse: collapse;
+            border: 1px solid black;
+            background-color: #ffc0cb;
+        }
+
+        th {
+            background-color: #87CEEB;
+        }
+    </style>
 </head>
-<style>
-table, 
-th, 
-td {
-    border-collapse: collapse;
-    border:1px solid black;
-	background-color:#ffc0cb;
-    
-}
-th {
-    background-color:#87CEEB;
-}
-</style>
-
-
 <body>
 
-<p> Liste </p>
-<a href="/team/" >Retourner à team</a>
+    <p>Liste</p>
+    <a href="/team/">Retourner à team</a>
 
-<?php
+    <?php
+    echo '<table>
+            <tr>
+                <th> name </th>
+                <th> comment </th>
+            </tr>';
+    ?>
 
-
-echo '  <table>
-<tr>
-<th> name </th>
-<th> comment </th>
-</tr>'; 
-
-
-
-?>
 </body>
 </html>
