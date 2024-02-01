@@ -10,6 +10,6 @@ $routes->get('/', 'Home::index');
 use App\Controllers\Pages;
 
 $routes->get('/', 'Home::index');
-$routes->get('/licence', 'Licence::menu');
-$routes->get('/licence/add', 'Licence::add');
-$routes->get('/licence/liste', 'Licence::liste');
+$routes->get('/license', 'License::menu');
+$routes->get('/license/add', 'License::add');
+$routes->get('/license/list', 'License::list');

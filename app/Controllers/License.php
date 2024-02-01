@@ -4,21 +4,21 @@ namespace App\Controllers;
 
 use CodeIgniter\Exceptions\PageNotFoundException; // Add this line
 
-class Licence extends BaseController
+class License extends BaseController
 {
     // ...
 
     public function menu()
     {
-    return view('licence/license_menu');
+    return view('license/license_menu');
     }
     
     public function add()
     {
-    return view('licence/license_add');
+    return view('license/license_add');
     }
-    public function liste()
+    public function list()
     {
-    return view('licence/licence_list');
+    return view('license/license_list');
     }
 }
