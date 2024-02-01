@@ -7,11 +7,14 @@
 </head>
 <body>
 
-        <h1>"Menu"</h1>
-     <a href="/timeline/list">List</a>
-     <a href="/timeline/add">Add</a>
-     <a href="/timeline/detail">Detail</a>
-     
+        <h1>" Gestion des frises "</h1>
+
+        <ul>
+        <li><a href="/timeline/list">Liste des enregistrements </a></li>
+        <li><a href="/timeline/add">Ajout d'une enregistrement </a></li> 
+        <li><a href="/timeline/detail"> Detail </a></li>
+    </ul>
+   
 
      
 
