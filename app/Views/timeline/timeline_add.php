@@ -7,7 +7,7 @@
 </head>
 <body>
 
-      <h1>" Ajouter un enregistrement "</h1>
+      <h1>" Ajout d'un enregistrement "</h1>
 
       <a href="/timeline/"> Menu </a> <br>
 

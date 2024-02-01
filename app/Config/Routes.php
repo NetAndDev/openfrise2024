@@ -7,5 +7,5 @@ use CodeIgniter\Router\RouteCollection;
  */
 $routes->get('/', 'Home::index');
 $routes->get('/timeline', 'Timeline::index');
-$routes->get('/timeline/add', 'Timeline::add');
-$routes->get('/timeline/liste', 'Timeline::liste');
+$routes->get('/timeline/list', 'Timeline::list');
+$routes->get('/timeline/add', 'Timeline::add'); 

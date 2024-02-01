@@ -8,12 +8,12 @@ class Timeline extends BaseController
     {
         return view('timeline/timeline_menu');
     }
+    public function list(): string
+    {
+        return view('timeline/timeline_list');
+    }
     public function add(): string
     {
         return view('timeline/timeline_add');
-    }
-    public function liste(): string
-    {
-        return view('timeline/timeline_liste');
     }
 }
