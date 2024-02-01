@@ -35,8 +35,6 @@ echo '  <table>
     <th> date_begin </th>
     <th> date_end </th>
     <th> comment </th>
-    <th> date_create </th>
-    <th> date_update </th>
     </tr>'; 
 
 
