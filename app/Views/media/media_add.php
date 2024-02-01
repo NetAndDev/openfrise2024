@@ -1,32 +1,29 @@
 <!doctype html>
-<html>
+<html lang=fr>
 <head>
+    <title>Ajouter un enregistrement</title>
 </head>
 <body>
     <h1>Ajouter un enregistrement</h1>
     <form action="#" method="post">
-        <label>id_media</label><br>
-        <input type="texte" name="id_media"><br>
-        <label>label</label><br>
-        <input type="texte" name="label"><br>
-        <label>sublabel</label><br>
-        <input type="texte" name="sublabel"><br>
-        <label>legend</label><br>
-        <input type="texte" name="legend"><br>
-        <label>source</label><br>
-        <input type="texte" name="source"><br>
-        <label>filename</label><br>
-        <input type="texte" name="filename"><br>
-        <label>filename_ori</label><br>
-        <input type="texte" name="filename_ori"><br>
-        <label>licence</label>
-        <select name="code_licence"><br>
+        <label>Titre</label><br>
+        <input type="text" name="label"><br>
+        <label>Sous-titre</label><br>
+        <input type="text" name="sublabel"><br>
+        <label>Légende</label><br>
+        <input type="text" name="legend"><br>
+        <label>Source</label><br>
+        <input type="text" name="source"><br>
+        <label>Média</label>
+        <input type="file" name="filename" accept="image/* audio/* video/*" ><br>
+        <label>Licence</label>
+        <select name="code_licence">
             <option value="121">GPLv3</option>
             <option value="122">Copyright</option>
             <option value="123">Creative</option>
         </select><br>
-        <label>licence</label>
-        <select name="type_media"><br>
+        <label>Type</label>
+        <select name="type_media">
             <option value="1">Image</option>
             <option value="2">Vidéo</option>
             <option value="3">Audio</option>

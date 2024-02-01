@@ -1,6 +1,7 @@
 <!doctype html>
-<html>
+<html lang=fr>
 <head>
+    <title>Liste des médias</title>
 </head>
 <body>
     <h1>Liste des médias</h1>
@@ -12,9 +13,6 @@
             <td>legend</td>
             <td>source</td>
             <td>filename</td>
-            <td>filename_ori</td>
-            <td>code_licence</td>
-            <td>code_type_media</td>
         </tr>
     </table>
 </body>

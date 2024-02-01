@@ -7,5 +7,4 @@ use CodeIgniter\Router\RouteCollection;
  */
 $routes->get('/', 'Home::index');
 $routes->get('/media', 'Media::menu');
-$routes->get('/media/media_add', 'Media::add');
-$routes->get('/media/media_list', 'Media::list');
+$routes->get('(:segment)', [Pages::class, 'view']);
