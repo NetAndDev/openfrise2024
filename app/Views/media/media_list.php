@@ -15,4 +15,16 @@
             <td>filename</td>
         </tr>
     </table>
+    <?php
+        if (!empty($media) && is_array($media)){
+            foreach($media as $item){
+                if(is_array($item)){
+                    echo '<p>'.esc($item['id_media']).'</p>';
+                }
+            }
+        }
+        else{
+            echo '<p>Aucun Média trouvé.</p>';
+        }
+    ?>
 </body>
