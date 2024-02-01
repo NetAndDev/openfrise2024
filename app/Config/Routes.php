@@ -6,4 +6,4 @@ use CodeIgniter\Router\RouteCollection;
  * @var RouteCollection $routes
  */
 $routes->get('/', 'Home::index');
-$routes->get('/gallerie', 'Gallerie::menu');
+$routes->get('/gallerie', 'gallery_menu::index');
