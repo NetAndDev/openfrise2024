@@ -12,8 +12,6 @@
       <a href="/timeline/"> Menu </a> <br>
 
     <form action="#" method="post">
-        <label>id_timeline</label><br>
-        <input type="texte" name="id_timeline"><br>
         <label>label</label><br>
         <input type="texte" name="label"><br>
         <label>sublabel</label><br>
@@ -26,10 +24,6 @@
         <input type="texte" name="is_public"><br>
         <label>comment</label><br>
         <input type="texte" name="comment"><br>
-        <label>date_create</label><br>
-        <input type="texte" name="date_create"><br>
-        <label>date_update</label><br>
-        <input type="texte" name="date_update"><br>
         <label>code_licence</label><br>
         <select name="code_licence"><br>
             <option value="121">121</option>

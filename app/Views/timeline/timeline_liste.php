@@ -40,8 +40,6 @@ th
     <th> date_end </th>
     <th> is_public </th>
     <th> comment </th>
-    <th> date_create </th>
-    <th> date_update </th>
     <th> code_licence </th>
     </tr>'; 
    
