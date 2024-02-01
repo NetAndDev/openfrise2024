@@ -24,4 +24,17 @@ class Right extends BaseController
         return view('right/right_menu');
     }
 
+    public function display($page = 'menu')
+    {
+        if (! is_file(APPATH . 'Views/user/user_' . $page . '.php')) {
+            throw new PageNotFoundException($page);
+
+        }
+
+        $data['title'] = ucfirst($page);
+        $data['numero'] = 123;
+
+        return view('user/user_');
+    }
+
 }
