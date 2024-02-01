@@ -13,7 +13,7 @@
 
             echo 'Listes :' . '<br>';
 
-            echo '<form action="hyphen_liste.php" method="post">';
+            echo '<form action="hyphen_list.php" method="post">';
             echo '<label for="liste-select"></label>';
             echo '<input name="liste" id="liste">';
 

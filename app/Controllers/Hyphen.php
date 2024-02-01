@@ -15,6 +15,6 @@ class Hyphen extends BaseController
     }
     public function liste (): string
     {
-        return view('hyphen/hyphen_liste');
+        return view('hyphen/hyphen_list');
     }
 }
