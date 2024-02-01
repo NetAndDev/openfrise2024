@@ -21,7 +21,7 @@ class Media extends BaseController
 
     public function find($id_ser = false){
         $model = model(MediaModel::class);
-        $data['media'] = $model->getMedia($id_user);
+        $data['media'] = $model->getMedia($id_media);
 
         return view('media/media_'.$page, $data);
     }

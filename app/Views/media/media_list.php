@@ -19,12 +19,12 @@
         if (!empty($media) && is_array($media)){
             foreach($media as $item){
                 if(is_array($item)){
-                    echo '<p>'.esc($item['id_media']).'</p>';
+                    echo esc($item['id_media']);
                 }
             }
         }
         else{
-            echo '<p>Aucun Média trouvé.</p>';
+            echo 'Aucun Média trouvé.';
         }
     ?>
 </body>

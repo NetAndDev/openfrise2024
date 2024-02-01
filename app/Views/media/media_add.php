@@ -15,7 +15,7 @@
         <label>Source</label><br>
         <input type="text" name="source"><br>
         <label>Média</label>
-        <input type="file" name="filename" accept="image/* audio/* video/*" ><br>
+        <input type="file" name="filename" accept="image/*, audio/*, video/*" ><br>
         <label>Licence</label>
         <select name="code_licence">
             <option value="121">GPLv3</option>

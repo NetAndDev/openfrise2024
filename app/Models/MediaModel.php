@@ -16,5 +16,4 @@ class MediaModel extends Model
 
         return $this->where(['id_media' => $id])->first();
     }
-
 }
