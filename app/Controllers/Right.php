@@ -24,9 +24,15 @@ class Right extends BaseController
         return view('right/right_menu');
     }
 
-    public function display($page = 'menu')
+    public function find($id_user = false)
     {
-        if (! is_file(APPATH . 'Views/user/user_' . $page . '.php')) {
+        $model = model(RightModel::class);
+
+        $data['user'] = $model->getUser($id_user);
+
+        $page = 'detail';
+
+        if (! is_file(APPATH . 'Views/right/right_' . $page . '.php')) {
             throw new PageNotFoundException($page);
 
         }
@@ -34,7 +40,7 @@ class Right extends BaseController
         $data['title'] = ucfirst($page);
         $data['numero'] = 123;
 
-        return view('user/user_');
+        return view('right/right_' . $page, $data);
     }
 
 }
