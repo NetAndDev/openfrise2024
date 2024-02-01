@@ -1,3 +1,5 @@
+<body>
+
 <h1>Licence</h1>
 
 
@@ -14,27 +16,19 @@
 <th>date_update</th>
 </tr>
 
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
 </tr>
-
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
+    </table>
+    <?php
+        if (!empty($license) && is_array($license)){
+            foreach($license as $item){
+                if(is_array($item)){
+                    echo '<p>'.esc($item['id_license']).'</p>';
+                }
+            }
+        }
+        else{
+            echo '<p>Aucune Licence trouvé.</p>';
+        }
+    ?>
+</body>
 
