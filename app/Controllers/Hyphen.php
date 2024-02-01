@@ -13,7 +13,7 @@ class Hyphen extends BaseController
     {
         return view('hyphen/hyphen_add');
     }
-    public function liste (): string
+    public function list (): string
     {
         return view('hyphen/hyphen_list');
     }
