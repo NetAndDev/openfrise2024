@@ -16,8 +16,15 @@ class Timeline extends BaseController
             // Whoops, we don't have a page for that!
             throw new PageNotFoundException($page);
         }
-     
-        $model_time = model('TimelineModel');
+        
+        $model = model('App\Models\TimelineModel');
+        $data['timeline'] = $model->getTimeline();
+
+        return view('/timeline/timeline_'.$page, $data); //$data: ['numero' => 123]
+    }
+}
+        
+        /*$model_time = model('TimelineModel');
         $array_test = array (
             'label',
             'sublabel',
@@ -33,6 +40,6 @@ class Timeline extends BaseController
         
         return view('timeline/timeline_'.$page, $data);
     }
-}
+}*/
     
 

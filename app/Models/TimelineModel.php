@@ -17,7 +17,7 @@ class TimelinetModel extends Model
         return $this->where(['id_timeline' => $id])->first();
     }
 
-    public function getFieldsNames($field = array (0 => '*')) 
+    /*public function getFieldsNames($field = array (0 => '*')) 
     {
         return $this->select(implode(',', $field))->get()->getFieldNames();
     }
@@ -25,6 +25,6 @@ class TimelinetModel extends Model
     public function getValue($field = array (0 => '*'))
     {
         return $this->select(implode(',', $field))->get()->getResultArray();
-    }
+    }*/
 }
  
