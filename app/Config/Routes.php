@@ -1,9 +1,11 @@
 <?php
 
-use CodeIgniter\Router\RouteCollection;
+use App\Controllers\Gallery;
+use App\Controllers\Home;
 
 /**
  * @var RouteCollection $routes
  */
 $routes->get('/', 'Home::index');
-$routes->get('/gallerie', 'gallery_menu::index');
+$routes->get('/gallery',[Gallery::class,'display']);
+$routes->get('/gallery/(:segment)',[Gallery::class,'display']);
