@@ -21,9 +21,9 @@ table {
     font-family: "Montserrat", sans-serif;
   }
 
-  /*tbody tr:nth-child(even) {
+  tbody tr:nth-child(even) {
     background-color: #EFC620; 
-  }*/
+  }
 
  
   .important {

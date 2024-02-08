@@ -5,6 +5,46 @@
   <title>Types de médias</title>
   <link href="../../../public/style/style.css" rel="stylesheet">
       <h1>La liste des types des medias </h1>
+      <style>
+        table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: none;
+  }
+
+  th,
+  td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #71B4B2; 
+    font-family: "Montserrat", sans-serif;
+    color: #000000; 
+  }
+
+  thead {
+    background-color: #7FCBD6; 
+    color: #000000; 
+    font-family: "Montserrat", sans-serif;
+  }
+
+  tbody tr:nth-child(even) {
+    background-color: #EFC620; 
+  }
+
+ 
+  .important {
+    color: #FFF069; 
+    font-weight: bold;
+  }
+
+ 
+  .fa-icon {
+    font-size: 16px;
+    margin-right: 5px;
+  }
+      </style>
 </head>
 <body>
 
