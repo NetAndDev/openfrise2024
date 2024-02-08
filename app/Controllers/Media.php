@@ -16,13 +16,9 @@ class Media extends BaseController
             throw new PageNotFoundException($page);
         }
         
-        return view('/media/media_'.$page); //$data: ['numero' => 123]
-    }
+        $model = model('App\Models\MediaModel');
+        $data['media'] = $model->getMedia();
 
-    public function find($id_ser = false){
-        $model = model(MediaModel::class);
-        $data['media'] = $model->getMedia($id_media);
-
-        return view('media/media_'.$page, $data);
+        return view('/media/media_'.$page, $data); //$data: ['numero' => 123]
     }
 }

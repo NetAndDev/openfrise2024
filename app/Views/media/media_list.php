@@ -19,7 +19,7 @@
         if (!empty($media) && is_array($media)){
             foreach($media as $item){
                 if(is_array($item)){
-                    echo esc($item['id_media']);
+                    echo esc($item['label']);
                 }
             }
         }
