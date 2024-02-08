@@ -28,10 +28,15 @@ class HyphenModel extends Model
         return $this->select(implode(',', $field))->get()->getFieldNames();
     }
 
-    
+
     public function getFieldsNames($field = array (0 => '*'))
     {
         return $this->select(implode(',', $field))->get()->getFieldNames();
+    }
+
+    public function getValues($field = array (0 => '*'))
+    {
+        return $this->select(implode(',', $field))->get()->getResultArray();
     }
 
 

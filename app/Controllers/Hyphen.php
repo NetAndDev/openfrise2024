@@ -28,7 +28,9 @@ class Hyphen extends BaseController
         );
 
         $data = array (
-            'fields' => $model->getFieldsNames($array_test)
+            'fields' => $model->getFieldsNames($array_test),
+            'value' => $model->getValues($array_test)
+
             
     );
 

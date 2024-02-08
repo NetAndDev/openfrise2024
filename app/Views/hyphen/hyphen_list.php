@@ -33,21 +33,14 @@ echo '  <table>';
 foreach($fields as $name){
     echo '<th>'.$name.'</th>';
 } 
+foreach($value as $row){
+    echo '<tr>';
+    foreach($row as $data) {
+        echo '<td>'.$data.'</td>';
+    }
+    echo '</tr>';
+} 
 echo '</table>';
-
-
-    if (!empty($hyphen) && is_array($hyphen)){
-        foreach($hyphen as $item){
-            if(is_array($item)){
-                echo esc($item['foofighters']);
-            }
-        }
-    }
-    else{
-        echo 'Aucun Média trouvé.';
-    }
-
-    
 
 ?>
 
