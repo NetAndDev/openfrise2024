@@ -20,6 +20,7 @@
 
     <p>Liste</p>
     <a href="/team/">Retourner à team</a>
+    <p><?=esc(print_r($data_n))?></p>
 
     <?php
     echo '<table>
