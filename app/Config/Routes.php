@@ -12,6 +12,7 @@ use CodeIgniter\Router\RouteCollection;
 
 use App\Controllers\Hyphen;
 
+$routes->get('/', [Home::class, 'index']);
 $routes->get('hyphen', [Hyphen::class, 'display']);
-$routes->get('hyphen/find', [Hyphen::class, 'find']);
+//$routes->get('hyphen/find', [Hyphen::class, 'find']);
 $routes->get('hyphen/(:segment)', [Hyphen::class, 'display']);

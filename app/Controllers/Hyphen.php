@@ -17,13 +17,32 @@ class Hyphen extends BaseController
             throw new PageNotFoundException($page);
         }
 
-        $data['title'] = ucfirst($page);
+        $model = model('HyphenModel');
 
-        return view('hyphen/hyphen_' . $page, $data);
+        $array_test = array (
+            'id_timeline',
+            'id_hyphen',
+            'date_begin',
+            'date_end',
+            'comment'
+        );
+
+        $data = array (
+            'fields' => $model->getFieldsNames($array_test)
+            
+    );
+
+
+        
+        
+        return view('hyphen/hyphen_'.$page, $data);
+        //$data['title'] = ucfirst($page);
+
+        //return view('hyphen/hyphen_' . $page, $data);
     }
 
 
-    public function find($id_hyphen = false)
+    /**public function find($id_hyphen = false)
     {
         $model = model(HyphenModel::class);
 
@@ -37,5 +56,5 @@ class Hyphen extends BaseController
         }
         return view('hyphen/hyphen_' . $page, $data);
      
-     }
+     }**/
 }

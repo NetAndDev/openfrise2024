@@ -28,16 +28,26 @@ h1 {
 <h1><strong>Liste</strong></h1>
 <?php
 
-echo '  <table>
-    <tr>
-    <th> id_timeline </th>
-    <th> id_hyphen </th>
-    <th> date_begin </th>
-    <th> date_end </th>
-    <th> comment </th>
-    </tr>'; 
+echo '  <table>';
+
+foreach($fields as $name){
+    echo '<th>'.$name.'</th>';
+} 
+echo '</table>';
 
 
+    if (!empty($hyphen) && is_array($hyphen)){
+        foreach($hyphen as $item){
+            if(is_array($item)){
+                echo esc($item['foofighters']);
+            }
+        }
+    }
+    else{
+        echo 'Aucun Média trouvé.';
+    }
+
+    
 
 ?>
 
