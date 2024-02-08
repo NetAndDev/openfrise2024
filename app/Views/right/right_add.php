@@ -4,6 +4,7 @@
     <title>Attribuer des rôles</title>
 </head>
 <body>
+<form action="right_list.php" method="POST">
     <h1>Attribuer des rôles</h1>
     <br>
     <label>ID de l'utilisateur</label>
@@ -19,5 +20,6 @@
     </select>
     <br><br>
     <input type="submit" value="Enregistrer">
+</form>
 </body>
 </html>
