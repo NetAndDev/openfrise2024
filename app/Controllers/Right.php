@@ -34,8 +34,7 @@ class Right extends BaseController
         $model = model('App\Models\RightModel');
         $data['right'] = $model->getRight();
 
-
-        return view('/right/right_' . $page);
+        return view('/right/right_' . $page, $data);
     }
 
 

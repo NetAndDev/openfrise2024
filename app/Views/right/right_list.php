@@ -21,13 +21,28 @@
     <table>
     <tr>
         <th>ID</th>
-        <th>Nom</th>
-        <th>Prénom</th>
         <th>Rôle</th>
+        <th>Commentaire</th>
+        <th>Dernière modification</th>
     </tr>
-    </table>
     <?php
+        if (!empty($right) && is_array($right)){
         
+            foreach($right as $item){
+                if(is_array($item)){
+                    echo '<tr>';
+                    echo '<td>'.esc($item['id_right']).'</td>';
+                    echo '<td>'.esc($item['label']).'</td>';
+                    echo '<td>'.esc($item['comment']).'</td>';
+                    echo '<td>'.esc($item['date_update']).'</td>';
+                    echo '</tr>';
+                }
+            }
+        }
+        else{
+            echo "Aucun droit trouvé.";
+        }
     ?>
+    </table>
 </body>
 </html>
