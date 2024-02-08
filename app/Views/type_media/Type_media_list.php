@@ -22,16 +22,30 @@
       background-color: #FF0000;
     }
   </style>
+      <h1>La liste des types des medias </h1>
 </head>
 <body>
 
 
   <?php
+
+echo'<table>
+    <thead>
+        <tr>
+            <th>Code type média</th>
+            <th>Label</th>
+            <th>Icon</th>
+            <th>Icon ori</th>
+            <th>Comment</th>
+            <th>Date create</th>
+            <th>Date update</th>
+            
+        </tr>
+        </thead>';
+
 for ($i = 0; $i < count($chart); $i++) {
     $item = $chart[$i];
-
     echo "<tr>";
-
     echo "<td>{$item['code_type_media']}</td>";
     echo "<td>{$item['label']}</td>";
     echo "<td>{$item['icon']}</td>";
@@ -39,19 +53,14 @@ for ($i = 0; $i < count($chart); $i++) {
     echo "<td>{$item['comment']}</td>";
     echo "<td>{$item['date_create']}</td>";
     echo "<td>{$item['date_update']}</td>";
-    
     echo "</tr>";
-
-    
 }
-
-
-
-
-
+echo '</table>';
 ?>
 
-<?= esc(print_r($chart)) ?>
-    <?= esc(print_r($dell)) ?>
+
+    
+
+
 </body>
 </html>
