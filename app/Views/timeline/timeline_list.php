@@ -28,26 +28,25 @@ th
         <a href="/timeline/"> Menu </a> <br>
 
         <h1>" Liste des enregistrements "</h1>
-        
-
 
 <?php
-        echo '<table>
+ 
+ echo '  <table>';
 
-    <tr>
-    <th> id_timeline </th>
-    <th> label </th>
-    <th> sublabel </th>
-    <th> date_begin </th>
-    <th> date_end </th>
-    <th> is_public </th>
-    <th> comment </th>
-    <th> code_licence </th>
-    </tr>'; 
-   
+ foreach($fields as $name){
+     echo '<th>'.$name.'</th>';
+ } 
+ foreach($value as $row){
+     echo '<tr>';
+     foreach($row as $data) {
+         echo '<td>'.$data.'</td>';
+     }
+     echo '</tr>';
+ } 
+ echo '</table>';
+ 
+
 ?>
-    /* <?= 'Tahia Djazair' ?> */
-    
-        
+ 
     </body>
 </html>

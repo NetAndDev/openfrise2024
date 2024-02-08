@@ -11,9 +11,8 @@
 
         <ul>
         <li><a href="/timeline/list">Liste des enregistrements </a></li>
-        <li><a href="/timeline/add">Ajout d'une enregistrement </a></li> 
-        <li><a href="/timeline/detail"> Detail </a></li>
-    </ul>
+        <li><a href="/timeline/add">Ajout d'un enregistrement </a></li> 
+        </ul>
    
 
      
