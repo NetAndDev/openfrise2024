@@ -17,18 +17,13 @@ class EventModel extends Model
         return $this->where(['id_timeline' => $id])->first();
     }
 
-    public function m($field = array (0 => '*'))
-    {
-        return $this->query("SELECT " . implode(',', $field) . " FROM BDD_EVENTS")->getFieldNames();
-    }
-
-    public function l($field = array (0 => '*'))
-    {
-        return $this->select(implode(',', $field))->get()->getResultArray();
-    }
-
-    public function p($field = array (0 => '*'))
+    public function getFieldsNames($field = array (0 => '*')) 
     {
         return $this->select(implode(',', $field))->get()->getFieldNames();
+    }
+
+    public function getValue($field = array (0 => '*'))
+    {
+        return $this->select(implode(',', $field))->get()->getResultArray();
     }
 }
