@@ -14,7 +14,7 @@ class Team extends BaseController
         $model_team = model('TeamModel');
 
         $data = [
-            'data_n'     => $model_team->getTeam(2),
+            'data_n'     => $model_team->getTeam(),
             'teamName' => $model_team->teamName(),
             'teamtest' => $model_team->teamName(['id_team', 'name']),
         ];
