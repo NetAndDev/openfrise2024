@@ -5,22 +5,27 @@
 
 </head>
 <body>
-<p> LISTE </p>
+
 <a href="/event/">Retourner</a>
 <?php
-$db = \Config\Database::connect();;
-$query  = $db->query('SELECT * FROM BDD_EVENTS');
-$results = $query->getResultArray();
 
-foreach ($results as $row) {
-    print_r($row);
-}
 echo '<br>======================<br>';
 echo '<table style="border:1px solid" ><tr style="border:1px">';
-foreach (array_keys($row) as $t) {
-    echo '<td style="border:1px solid">'.$t.'</td>';
-}
+
 echo '</tr></table>';
+
 ?>
+test 123:
+<p><?= esc($mael) ?></p>
+test where id_timeline = 24:
+<p><?= esc(print_r($test)) ?></p>
+test pour récup les noms des champs sans précisions
+<p><?= esc(print_r($f)) ?></p>
+test récup nom champs avec param
+<p><?= esc(print_r($F)) ?></p>
+test remplacemet de la fonction "m" (sans query())
+<p><?= esc(print_r($ff)) ?></p>
+test récup tt val champ w/ param
+<p><?= esc(print_r($foofighters)) ?></p>
 </body>
 </html>

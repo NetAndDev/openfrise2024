@@ -1,11 +1,11 @@
 <?php
 
-use CodeIgniter\Router\RouteCollection;
+use App\Controllers\Event;
+use App\Controllers\Home;
 
 /**
  * @var RouteCollection $routes
  */
-$routes->get('/', 'Home::index');
-$routes->get('/event', 'Event::index');
-$routes->get('/event/list', 'Event::list');
-$routes->get('/event/add', 'Event::add');
+$routes->get('/', [Home::class, 'index']);
+$routes->get('event', [Event::class, 'display']);
+$routes->get('event/(:segment)', [Event::class, 'display']);
