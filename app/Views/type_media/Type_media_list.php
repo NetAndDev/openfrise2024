@@ -3,25 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Types de médias</title>
-  <style>
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      border: 1px solid #ccc;
-      margin-bottom: 20px;
-    }
-
-    th,
-    td {
-      padding: 10px;
-      text-align: left;
-      border: 1px solid #ccc;
-    }
-
-    thead {
-      background-color: #FF0000;
-    }
-  </style>
+  <link href="../../../public/style/style.css" rel="stylesheet">
       <h1>La liste des types des medias </h1>
 </head>
 <body>
