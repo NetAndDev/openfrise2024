@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="fr">
 <head>
+  <link href="../../../public/style/style.css" rel="stylesheet">
   <meta charset="utf-8">
   <title>Timeline</title>
 <style>

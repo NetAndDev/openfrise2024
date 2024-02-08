@@ -1,0 +1,19 @@
+.table
+{
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+.th
+{
+	border: 1px solid black;
+	color: black;
+    	padding: 5px;
+	background-color: #7FCBD6;  
+}
+.td
+{
+	border: 1px solid black;
+    	padding: 5px;
+		text-align:center;
+}
