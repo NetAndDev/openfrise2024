@@ -26,5 +26,8 @@
         <th>Rôle</th>
     </tr>
     </table>
+    <?php
+        
+    ?>
 </body>
 </html>

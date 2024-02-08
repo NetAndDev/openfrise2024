@@ -17,12 +17,13 @@ class Right extends BaseController
     public function list()
     {
         return view('right/right_list');
-    }
+    }*/
 
     public function menu()
     {
         return view('right/right_menu');
-    }*/
+    }
+    
     public function display($page = 'menu')
     {
         if (! is_file(APPPATH . 'Views/right/right_' . $page . '.php')) {
@@ -30,9 +31,11 @@ class Right extends BaseController
             throw new PageNotFoundException($page);
         }
 
-        //$data['title'] = ucfirst($page); // Capitalize the first letter
+        $model = model('App\Models\RightModel');
+        $data['right'] = $model->getRight();
 
-        return view('right/right_' . $page);
+
+        return view('/right/right_' . $page);
     }
 
 
