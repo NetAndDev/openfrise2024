@@ -22,7 +22,7 @@
                     echo '<td>'.esc($item['label']).'</td>';
                     echo '<td>'.esc($item['sublabel']).'</td>';
                     echo '<td>'.esc($item['legend']).'</td>';
-                    echo '<td>'.esc($item['source']).'</td>';
+                    echo '<td><a href='.esc($item['source']).'>'.esc($item['source']).'</a></td>';
                     echo '<td>'.esc($item['filename']).'</td>';
                     echo '</tr>';
                 }

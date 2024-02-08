@@ -19,6 +19,6 @@ class Media extends BaseController
         $model = model('App\Models\MediaModel');
         $data['media'] = $model->getMedia();
 
-        return view('/media/media_'.$page, $data); //$data: ['numero' => 123]
+        return view('/media/media_'.$page, $data);
     }
 }
