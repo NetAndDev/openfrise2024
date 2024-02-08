@@ -17,18 +17,11 @@ class License extends BaseController
             throw new PageNotFoundException($page);
         }
         
-        return view('/license/license_'.$page); //$data: ['numero' => 123]
+        $model = model('app/Models/LicenseModel');
+        $data['license'] = $model->getLicense();
+
+        return view('license/license_'.$page,$data);
+
     }
-
-  
-
-    
-   
-    
-        public function find($id_ser = false){
-            $model = model(LicenseModel::class);
-            $data['license'] = $model->getLicense($id_license);
-    
-            return view('license/license_'.$page, $data);
-        }
-    }    
+}
+        
