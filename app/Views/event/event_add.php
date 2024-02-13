@@ -1,30 +1,33 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>ADD</title>
+    <title>ADD</title>
+    <link rel="stylesheet" href="<?= base_url(); ?>styles/default/styles.css">
 </head>
+
 <body>
-<a href="/event/">Retourner</a>
-<form action="" method="post">
-    <label for="label">label:</label>
-    <input type="text" id="label">
-    <br>
-    <label for="sublabel">sublabel:</label>
-    <input type="text" id="sublabel">
-    <br>
-    <label for="is_ponctual">is_ponctual:</label>
-    <input type="text" id="is_ponctual">
-    <br>
-    <label for="date_begin">date_begin:</label>
-    <input type="text" id="date_begin">
-    <br>
-    <label for="date_end">date_end:</label>
-    <input type="text" id="date_end">
-    <br>
-    <label for="comment">comment:</label>
-    <input type="text" id="comment">
-    <br>
-    <input type="submit" value="Envoyer">
-</form>
+    <h1>Ajouter un nouvel évènement</h1>
+    <a href="/event/">Retourner</a>
+    <form action="" method="post">
+        <?php
+        
+        echo '<table>';
+
+        foreach ($fields as $name) {
+            echo '<tr>';
+            echo '<td>';
+            echo '<label for="' . $name . '">' . $nom[$name] . ':</label>';
+            echo '</td>';
+            echo '<td>';
+            echo '<input type="text" id="' . $name . '">';
+            echo '</td>';
+            echo '</tr>';
+        }
+        echo '</table>';
+        ?>
+        <input type="submit" value="Envoyer">
+    </form>
 </body>
+
 </html>

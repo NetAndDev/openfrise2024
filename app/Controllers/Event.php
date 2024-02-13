@@ -24,7 +24,19 @@ class Event extends BaseController
         );
         $data = [
             'fields' => $model_mael->getFieldsNames($array_test),
-            'value' => $model_mael->getValue($array_test)
+            'value' => $model_mael->getValue($array_test),
+            'nom' => array(
+                'id_timeline' => 'Identifiant timeline?',
+                'id_event'    => 'Identifiant event?',
+                'label'       => 'Titre',
+                'sublabel'    => 'Sous-titre',
+                'is_ponctual' => 'Est Ponctuel',
+                'date_begin'  => 'Date de Début',
+                'date_end'    => 'Date de Fin',
+                'comment'     => 'Commentaire',
+                'date_create' => '???',
+                'date_update' => '???'
+            )
         ];
         
         
