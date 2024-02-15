@@ -8,13 +8,13 @@ class EventModel extends Model
 {
     protected $table = 'EVENTS';
 
-    public function getEvent($id = false)
+    public function getEvent($id_timeline = false, $id_event = false)
     {
-        if ($id === false) {
+        if ($id_timeline === false && $id_event === false) {
             return $this->findAll();
         }
 
-        return $this->where(['id_timeline' => $id])->first();
+        return $this->where(['id_timeline' => $id_timeline, 'id_event' => $id_event])->first();
     }
 
     public function getFieldsNames($field = array (0 => '*')) 
@@ -25,5 +25,9 @@ class EventModel extends Model
     public function getValue($field = array (0 => '*'))
     {
         return $this->select(implode(',', $field))->get()->getResultArray();
+    }
+
+    public function insetEvent() {
+        return null;
     }
 }

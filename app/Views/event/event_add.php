@@ -9,7 +9,7 @@
 <body>
     <h1>Ajouter un nouvel évènement</h1>
     <a href="/event/">Retourner</a>
-    <form action="" method="post">
+    <form action="add" method="post">
         <?php
         
         echo '<table>';
@@ -27,6 +27,13 @@
         echo '</table>';
         ?>
         <input type="submit" value="Envoyer">
+
+        <?php
+        echo '<pre>';
+        $arr = get_defined_vars();
+        print_r($arr);
+        echo '</pre>';
+        ?>
     </form>
 </body>
 
