@@ -32,11 +32,11 @@ class Level extends BaseController
 
     public function insert()
     {
-        $model = model(LevelModel::class);
+        $model = model('App\Models\LevelModel');    
 
         $model->save([
         'label' => $_POST['label'],
-        'comment' => $_POST['comment'],
+        'comment' => $_POST['comment']
         ]);
 
         return($this->view('add_success'));

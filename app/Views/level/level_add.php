@@ -1,9 +1,9 @@
 <p><a href="<?= env('app.baseURL') ?>menu/">Menu</a></p>
     
-    <form action="level/insert" method="post">
+    <form action="<?= env('app.baseURL') ?>level/insert" method="POST">
         <label for="label">Label :</label>
         <input type="text" name='label' required><br>
-        <label for="commmet">comment :</label>
+        <label for="comment">comment :</label>
         <input type="text" name='comment' ><br><br>
 
         <input type="submit" value="Valider">
