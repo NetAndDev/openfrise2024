@@ -8,6 +8,8 @@ class RightModel extends Model
 {
     protected $table = 'RIGHTS';
 
+    protected $allowedFields = ['label', 'comment'];
+
     public function getRight($id = false)
     {
         if ($id === false) {

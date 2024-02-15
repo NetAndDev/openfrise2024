@@ -58,5 +58,19 @@ class Right extends BaseController
 
         return view('right/right_' . $page, $data);
     }
+    
+    public function insert()
+ {
+ $model = model(UserModel::class);
+
+ $model->save([
+ 'label' => $_POST['droit'],
+ 'comment' => $_POST['desc'],
+ // pour la mise en point, le mot de passe est mis en commentaire
+ ]);
+
+ return($this->display('add_success'));
+
+ }
 
 }

@@ -4,20 +4,16 @@
     <title>Attribuer des rôles</title>
 </head>
 <body>
-<form action="#" method="POST">
+<form action="<?= env('app.baseURL') ?>right/insert" method="POST">
     <h1>Attribuer des rôles</h1>
     <br>
-    <label>ID de l'utilisateur</label>
+    <label for="droit">Nouveau droit</label>
     <br>
-    <input type="number" name="id">
+    <input id="droit" type="text">
     <br><br>
-    <label>Rôle à attribuer</label>
+    <label for="desc">Description du droit</label>
     <br>
-    <select name="role">
-        <option>Visiteur</option>
-        <option>Utilisateur</option>
-        <option>Propriétaire</option>
-    </select>
+    <textarea id="desc" type="text"></textarea>
     <br><br>
     <input type="submit" value="Enregistrer">
 </form>

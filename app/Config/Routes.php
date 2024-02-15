@@ -13,5 +13,6 @@ $routes->get('/right/list', 'Right::list');*/
 
 
 $routes->get('right', [Right::class, 'display']);
+$routes->get('right/insert', [Right::class, 'insert']);
 $routes->get('right/(:segment)', [Right::class, 'display']);
 
