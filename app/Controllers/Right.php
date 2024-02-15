@@ -61,13 +61,13 @@ class Right extends BaseController
     
     public function insert()
  {
- $model = model(UserModel::class);
+    $model = model('App\Models\RightModel');
 
- $model->save([
- 'label' => $_POST['droit'],
- 'comment' => $_POST['desc'],
- // pour la mise en point, le mot de passe est mis en commentaire
- ]);
+    $model->save([
+    'label' => $_POST['label'],
+    'comment' => $_POST['comment']
+    // pour la mise en point, le mot de passe est mis en commentaire
+    ]);
 
  return($this->display('add_success'));
 

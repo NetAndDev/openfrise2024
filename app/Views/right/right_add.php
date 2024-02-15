@@ -1,21 +1,25 @@
 <!doctype html>
 <html>
 <head>
-    <title>Attribuer des rôles</title>
+    <title>Ajouter des rôles</title>
 </head>
 <body>
 <form action="<?= env('app.baseURL') ?>right/insert" method="POST">
-    <h1>Attribuer des rôles</h1>
+    <h1>Ajouter des rôles</h1>
     <br>
-    <label for="droit">Nouveau droit</label>
+    <label for="label">Nouveau droit</label>
     <br>
-    <input id="droit" type="text">
+    <input id="label" name="label" type="text">
     <br><br>
-    <label for="desc">Description du droit</label>
+    <label for="comment">Description du droit</label>
     <br>
-    <textarea id="desc" type="text"></textarea>
+    <textarea id="comment" name="comment" type="text"></textarea>
     <br><br>
     <input type="submit" value="Enregistrer">
 </form>
+        <ul>
+        <li><a href="/right/menu">Retour au menu</a></li>
+        <li><a href="/right/list">Liste des rôles</a></li>
+        </ul>
 </body>
 </html>

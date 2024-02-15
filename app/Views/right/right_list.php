@@ -17,6 +17,10 @@
 </style>
 
 <body>
+        <ul>
+        <li><a href="/right/menu">Retour au menu</a></li>
+        <li><a href="/right/add">Ajouter des rôles</a></li>
+        </ul>
     <h1>Liste</h1>
     <table>
     <tr>
