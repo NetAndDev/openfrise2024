@@ -43,7 +43,6 @@ public function insert()
  'filename_ori' => $_POST['filename_ori'],
  'icon' => $_POST['icon'],
  'icon_ori' => $_POST['icon_ori'],
- // pour la mise en point, le mot de passe est mis en commentaire
  'comment' => $_POST['comment'],
  ]);
 
