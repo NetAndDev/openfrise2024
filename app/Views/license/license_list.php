@@ -9,7 +9,7 @@
 
  <table> 
 <tr>
-<th>id license</th>
+<th>code license</th>
 <th>title</th>
 <th>filename</th>
 <th>filename_ori</th>

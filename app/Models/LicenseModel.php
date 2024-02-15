@@ -8,6 +8,10 @@ class LicenseModel extends Model{
 
     protected $table = "LICENSES";
 
+ // la ligne a ajouté
+ protected $allowedFields = ['title', 'filename', 'filename_ori', 'icon', 'icon_ori',
+ 'comment'];
+
     public function getLicense($id=false){ 
 
         if($id===false){
@@ -17,4 +21,5 @@ class LicenseModel extends Model{
         return $this->where(['code_license' => $id])->first();
     }
 }
+
 ?>
