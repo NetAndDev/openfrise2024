@@ -4,5 +4,5 @@
         <label for="commmet">comment :</label>
         <input type="text" name='comment' ><br><br>
 
-        <input type="submit" value="Rechercher">
+        <input type="submit" value="Valider">
     </form>

@@ -20,13 +20,16 @@ class Level extends BaseController
             throw new PageNotFoundException($page);
         }
 
+        $model = model('App\Models\LevelModel');
+        $data['level'] = $model->getLevel();
+
         $data['title'] = ucfirst($page); // Capitalize the first letter
 
         return view('templates/header', $data)
             . view('level/level_' . $page)
-            . view('templates/footer');
+            . view('templates/footer',$data);
     }
 
-    
+
 
 }

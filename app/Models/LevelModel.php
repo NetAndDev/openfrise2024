@@ -4,14 +4,16 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class UserModel extends Model
+class LevelModel extends Model
 {
-    /**
-     * Called during initialization. Appends
-     * our custom field to the module's model.
-     */
-    protected function initialize()
-    {
-        $this->allowedFields[] = 'middlename';
-    }   
+    protected $table = 'LEVELS';
+
+    public function getLevel($id = false){
+        
+        if($id === false){
+            return $this->findAll();
+        }
+
+        return $this->where(['id_level' => $id])->first();
+    }
 }
