@@ -7,7 +7,8 @@ use CodeIgniter\Router\RouteCollection;
  */
 $routes->get('/', 'Home::index');
 
-use App\Controllers\Pages;
+use App\Controllers\Level;
 
-$routes->get('pages', [Pages::class, 'index']);
-$routes->get('(:segment)', [Pages::class, 'view']);
+$routes->get('level', [Level::class, 'index']); 
+$routes->get('(:segment)', [Level::class, 'view']);
+
