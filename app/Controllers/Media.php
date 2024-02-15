@@ -19,6 +19,30 @@ class Media extends BaseController
         $model = model('App\Models\MediaModel');
         $data['media'] = $model->getMedia();
 
+        if($page == 'detail'){
+            $detail = $this->request->getGet();
+            $data['detail'] = $model->getMedia($detail); 
+        }
         return view('/media/media_'.$page, $data);
+    }
+
+    public function insert(){
+
+        $model = model('App\Models\MediaModel');
+
+        $model->save([
+
+            'label' => $_POST['label'],
+            'sublabel' => $_POST['sublabel'],
+            'legend' => $_POST['legend'],
+            'source' => $_POST['source'],
+            'filename_ori' => $_POST['filename_ori'],
+            'code_license' => $_POST['code_license'],
+            'code_type_media'=>  $_POST['code_type_media'],
+            'comment' => $_POST['comment']
+
+        ]);
+
+        return($this->display('add_success'));
     }
 }

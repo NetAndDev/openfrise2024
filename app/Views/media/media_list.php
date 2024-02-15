@@ -12,6 +12,7 @@
             <th>Légende</th>
             <th>Source</th>
             <th>Nom de fichier</th>
+            <th>Détail</th>
         </tr>
     <?php
         if (!empty($media) && is_array($media)){
@@ -24,6 +25,7 @@
                     echo '<td>'.esc($item['legend']).'</td>';
                     echo '<td><a href='.esc($item['source']).'>'.esc($item['source']).'</a></td>';
                     echo '<td>'.esc($item['filename']).'</td>';
+                    echo '<td><a href="detail?id='.esc($item['id_media']).'">Lien</a>';
                     echo '</tr>';
                 }
             }
