@@ -4,7 +4,7 @@
     <title>CodeIgniter Tutorial</title>
 </head>
 <body>
-
+<p><a href="<?= env('app.baseURL') ?>user/">Menu</a></p>
 <?= esc($title) ?>
     <h1>ajouter une licence</h1>
     <form action="license_list.php" method="post">

@@ -28,7 +28,7 @@
             foreach($license as $item){
                 if(is_array($item)){
                     echo '<tr>';
-                    echo '<td>'.esc($item['idlicense']).'</td>';
+                    echo '<td>'.esc($item['code_license']).'</td>';
                     echo '<td>'.esc($item['title']).'</td>';
                     echo '<td>'.esc($item['filename']).'</td>';
                     echo '<td>'.esc($item['filename_ori']).'</td>';

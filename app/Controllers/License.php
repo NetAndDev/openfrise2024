@@ -3,6 +3,8 @@
 
 namespace App\Controllers;
 
+use CodeIgniter\Exceptions\PageNotFoundException;
+
 class License extends BaseController
 {
     public function menu()
@@ -17,10 +19,13 @@ class License extends BaseController
             throw new PageNotFoundException($page);
         }
         
-        $model = model('app/Models/LicenseModel');
-        $data['license'] = $model->getLicense();
+        $model = model('LicenseModel');
+        
+        $data = array(
+            'license' => $model->getLicense()
+        );
 
-        return view('license/license_'.$page,$data);
+    return view('license/license_'.$page,$data);
 
     }
 }

@@ -2,7 +2,7 @@
 
 namespace app\Models;
 
-use codeIgniter\Model;
+use CodeIgniter\Model;
 
 class LicenseModel extends Model{
 
@@ -15,6 +15,6 @@ class LicenseModel extends Model{
         }
     
         return $this->where(['code_license' => $id])->first();
-        }
-    };
+    }
+}
 ?>
