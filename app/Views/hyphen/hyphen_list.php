@@ -1,47 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>liste</title>
+    <title>Liste</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="<?= base_url(); ?>styles/default/styles.css">
 </head>
-<style>
-body {
-      background-color: #EFC620; 
-      color: #7FCBD6;       
-}
-    
-table, 
-th, 
-td {
-    width: 500px;
-    margin: 0 auto;
-    text-align: center;
-    border-collapse: collapse;
-    border:1px solid black;
-    background-color: #43B6C7;
-    color: #000000;
-    
-}
-th {
-    background-color: #43B6C7;
-}
-h1 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #000000;
-    font-weight: bold;
 
-}
-        </style>
 <body>
 <h1><strong>Liste</strong></h1>
-<a href="/hyphen/menu">menu</a>
+<a href="/hyphen">menu</a>
 <?php
 
 echo '  <table>';
 
 foreach($fields as $name){
-    echo '<th>'.$name.'</th>'."\n";
-} 
+    echo '<th>'.$nom[$name].'</th>'."\n";
+}
 foreach($value as $row){
     echo '<tr>';
     foreach($row as $data) {
@@ -52,6 +28,11 @@ foreach($value as $row){
 echo '</table>';
 
 ?>
-
+<a href='/hyphen/detail'>détail</a>
 </body>
+<footer class="footer">
+        <div>
+            <p> Conception </p>
+        </div>
+    </footer>
 </html>

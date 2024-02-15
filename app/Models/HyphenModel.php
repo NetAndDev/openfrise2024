@@ -8,26 +8,15 @@ class HyphenModel extends Model
 {
     protected $table = 'HYPHENS';
 
+    protected $allowedFields = ['date_begin','date_end','comment'];
 
     public function getHyphen($id = false)
     {
         if ($id === false) {
             return $this->findAll();
         }
-
         return $this->where(['id_hyphen' => $id])->first();
     }
-
-    public function l($field = array (0 => '*'))
-    {
-        return $this->select(implode(',', $field))->get()->getResultArray();
-    }
-
-    public function p($field = array (0 => '*'))
-    {
-        return $this->select(implode(',', $field))->get()->getFieldNames();
-    }
-
 
     public function getFieldsNames($field = array (0 => '*'))
     {
@@ -38,4 +27,9 @@ class HyphenModel extends Model
     {
         return $this->select(implode(',', $field))->get()->getResultArray();
     }
+    public function getValuesTimeline($field = array (0 => '*'))
+    {
+        return $this->select();
+    }
+    
 }

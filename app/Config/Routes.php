@@ -5,13 +5,10 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
-//$routes->get('/', 'Home::index');
-//$routes->get('/hyphen', 'Hyphen::index');
-//$routes->get('/hyphen/add', 'Hyphen::add');
-//$routes->get('/hyphen/list', 'Hyphen::list');
 
 use App\Controllers\Hyphen;
 
-$routes->get('/', [Home::class, 'index']);
-$routes->get('hyphen', [Hyphen::class, 'display']);
+
+$routes->get('hyphen', [Hyphen::class, 'index']);
+$routes->post('/hyphen/insert', [Hyphen::class, 'insert']);
 $routes->get('hyphen/(:segment)', [Hyphen::class, 'display']);

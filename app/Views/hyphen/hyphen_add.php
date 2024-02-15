@@ -1,76 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>add</title>
+    <title>Ajout</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="<?= base_url(); ?>styles/default/styles.css">
 </head>
-<style>
-  body {
-      background-color: #EFC620; 
-      color: #7FCBD6; 
-      
-    }
-
-    form {
-      width: 500px;
-      margin: 0 auto;
-      padding: 20px;
-      background-color: #43B6C7; 
-      border-radius: 10px;
-      
-    }
-
-    h1 {
-      text-align: center;
-      margin-bottom: 20px;
-      color: #000000;
-      font-weight: bold;
-      
-    }
-
-    label {
-      display: block;
-      margin-bottom: 2px;
-      margin-top: 2px;
-      color: #000000; 
-      
-    }
-
-    input[type="text"],
-    select {
-      width: 100%;
-      padding: 10px;
-      border: 1px solid #71B4B2; 
-      border-radius: 5px;
-      background-color: #FFFFFF; 
-      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-      margin-bottom: 10px;
-    }
-
-    input[type="submit"] {
-      background-color: #FFF069; 
-      color: #000000; 
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-  </style>
 <body>
-<a href="/hyphen/menu">menu</a>
-<?php
-
-            echo '<h1>Listes<h1>';
-
-            echo '<form action="hyphen_list.php" method="post">';
-            echo '<label for="liste-select">test</label>';
-            echo '<input name="liste" id="liste">';
-
-            echo '<input type="submit" value="Envoyer"> <br>';
-            echo '</form>';
-            
-?>
-
+<h1><strong>Ajout d'une coupure</strong></h1>
+<a href="/hyphen">menu</a>
+    <form action="<?= env('app.baseURL') ?>/hyphen/insert" method="POST">
+        <label>Nom de la frise</label>
+        <select name="idTimeline" id="idTimeline-select"></select>
+        <label>Date de début</label>
+        <input type="text" name="date_begin" required><br>
+        <label>Date de fin</label>
+        <input type="text" name="date_end" required><br>
+        <label>Commentaire</label>
+        <input type="text" name="comment"><br>
+        <input type="submit" Value="Envoyer">
+    </form>
 </body>
+<footer class="footer">
+        <div>
+            <p> Conception </p>
+        </div>
+    </footer>
 </html>
