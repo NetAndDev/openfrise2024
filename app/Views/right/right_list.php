@@ -27,7 +27,6 @@
         <th>ID</th>
         <th>Rôle</th>
         <th>Commentaire</th>
-        <th>Dernière modification</th>
     </tr>
     <?php
         if (!empty($right) && is_array($right)){
@@ -38,7 +37,7 @@
                     echo '<td>'.esc($item['id_right']).'</td>';
                     echo '<td>'.esc($item['label']).'</td>';
                     echo '<td>'.esc($item['comment']).'</td>';
-                    echo '<td>'.esc($item['date_update']).'</td>';
+                    echo '<td><a href="/right/detail/">'.'Voir les détails'.'</a></td>';
                     echo '</tr>';
                 }
             }
