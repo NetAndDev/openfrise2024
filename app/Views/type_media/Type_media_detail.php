@@ -32,7 +32,7 @@
                 }
         }
         else{
-            echo "Aucun droit trouvé.";
+            echo "Aucun type media trouvé.";
         }
 
     ?>
