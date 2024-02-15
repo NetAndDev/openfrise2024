@@ -26,13 +26,18 @@ class Hyphen extends BaseController
 
         $model = model('HyphenModel');
 
-        $array_test = array (
+        /**$array_test = array (
             'date_begin',
             'date_end',
             'comment'
-        );
+        );**/
+        $data['hyphen'] = $model->gethyphen();
 
-        $data =  [
+        if($page == 'detail'){
+            $detail = $this->request->getGet();
+            $data['detail'] = $model->gethyphen($detail); 
+        }
+        /**$data =  [
             'fields' => $model->getFieldsNames($array_test),
             'value' => $model->getValues($array_test),
             'nom' => array(
@@ -41,7 +46,7 @@ class Hyphen extends BaseController
             'comment'     => 'Commentaire ',
             )
             
-    ]; 
+    ]; **/
         return view('hyphen/hyphen_'.$page, $data);
     }
 
