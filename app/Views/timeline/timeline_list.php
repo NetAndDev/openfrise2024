@@ -34,7 +34,7 @@ td
     
         <a href="/timeline/"> Menu </a> <br>
 
-        <h1>" Liste des enregistrements "</h1>
+        <h1>" Affichage des frises "</h1>
 
         <table>
         <tr>
@@ -79,6 +79,9 @@ else{
 }
 
 ?>
-         </table>
+</table>
+        <ul>
+        <li><a href="/timeline/detail">Detail</a></li> 
+        </ul>
     </body>
 </html>

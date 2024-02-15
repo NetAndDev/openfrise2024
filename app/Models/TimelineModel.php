@@ -8,6 +8,9 @@ class TimelinetModel extends Model
 {
     protected $table = 'TIMELINES';
 
+    //liste des champs autorisés pour l'insertion
+    protected $allowedFields =['label', 'sublabel', 'date_begin', 'date_end', 'is_public', 'comment'];
+
     public function getTimeline($id = false)
     {
         if ($id === false) {
@@ -26,5 +29,6 @@ class TimelinetModel extends Model
     {
         return $this->select(implode(',', $field))->get()->getResultArray();
     }*/
+
 }
  

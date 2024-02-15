@@ -59,6 +59,12 @@
       cursor: pointer;
       font-weight: bold;
     }
+    input[type="radio"] {
+    display: inline-block; 
+    margin-right: 5px; 
+    }
+   
+
 
   </style>
 
@@ -66,33 +72,39 @@
 </head>
 <body>
 
-      <a href="/timeline/"> Menu </a> <br>  
+      <p><a href="<?= env('app.baseURL') ?>timeline/">Menu</a></p>
 
-      <h1>Ajout d'un enregistrement</h1>
+           <h1>Ajout d'une frise</h1>
 
+     <form action="<?= env('app.baseURL') ?>timeline/insert" method="POST">
 
-    <form action="#" method="post">
         <label>Libellé</label>
-        <input type="texte" name="label"><br><br>
+        <input type="texte" name="label" required><br><br>
         <label>Sous-libellé</label>
-        <input type="texte" name="sublabel"><br><br>
+        <input type="texte" name="sublabel" required><br><br>
         <label>Date de début</label>
-        <input type="texte" name="date_begin"><br><br>
+        <input type="texte" name="date_begin" required><br><br>
         <label>Date de fin</label>
-        <input type="texte" name="Date de fin"><br><br>
-        <label>is_public</label>
-        <input type="texte" name="is_public"><br><br>
+        <input type="texte" name="date_end" required><br><br>
+
+        <label> Est-ce public ? </label>
+               <input type="radio" id="is_public_true" name="is_public" value="1">
+               <label for="is_public_true">True</label>
+               <input type="radio" id="is_public_false" name="is_public" value="0">
+               <label for="is_public_false">False</label><br>
+
         <label>Commentaire</label>
-        <input type="texte" name="Commentaire"><br><br>
+        <textarea type="texte" name="comment" rows='4' cols='55' minlength="1" maxlength="300"></textarea><br><br>
         <label>code_licence</label>
         <select name="code_licence"><br>
             <option value="121">121</option>
             <option value="122">122</option>
             <option value="123">123</option>
         </select><br>
-        <input type="submit" Value="Envoyer">
-    </form>
 
+    <p><input name="submit" type="submit" value="Valider"></p>
 
-    </body>
+     </form>
+
+     </body>
 </html>
