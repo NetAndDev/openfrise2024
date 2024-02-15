@@ -8,6 +8,9 @@ class EventModel extends Model
 {
     protected $table ='GALLERIES';
 
+    // liste des champs autorisés pour l'insertion
+    protected $allowedFields = ['label', 'sublabel', 'comment'];
+    
     public function getGallery($id = false)
     {
         if ($id === false){
@@ -28,7 +31,13 @@ class EventModel extends Model
     {
         return $this->select(implode(',',$field))->get()->getResultArray();
     }
-
+    public function getUser($id = false)
+{
+if ($id === false) {
+return $this->findAll();
 }
 
+return $this->where(['id_user' => $id])->first();
+}
+}
 ?>

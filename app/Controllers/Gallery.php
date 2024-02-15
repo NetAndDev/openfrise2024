@@ -34,5 +34,17 @@ class Gallery extends BaseController
         return view('gallery/gallery_'.$page,$data);
 
     }
+     
+    public function insert()
+    {
+    $model = model('App\Models\GalleryModel');
+    
+    $model->save([
+    'label' => $_POST['label'],
+    'sublabel' => $_POST['sublabel'],
+    'comment' => $_POST['comment'],
+    ]);
 
+    return($this->display('add_success'));
+    }
 }
