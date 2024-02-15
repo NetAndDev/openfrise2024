@@ -5,7 +5,7 @@
 </head>
 
 <style>
-    table, tr, th {
+    th {
 
         border: 1px solid black;
     }
@@ -22,9 +22,10 @@
         <li><a href="/right/add">Ajouter des rôles</a></li>
         </ul>
     <h1>Liste</h1>
+    <a href="/right/detail/">Voir les détails</a>
+    <br><br>
     <table>
     <tr>
-        <th>ID</th>
         <th>Rôle</th>
         <th>Commentaire</th>
     </tr>
@@ -34,10 +35,8 @@
             foreach($right as $item){
                 if(is_array($item)){
                     echo '<tr>';
-                    echo '<td>'.esc($item['id_right']).'</td>';
-                    echo '<td>'.esc($item['label']).'</td>';
+                    echo '<td><strong>'.esc($item['label']).'</strong></td>';
                     echo '<td>'.esc($item['comment']).'</td>';
-                    echo '<td><a href="/right/detail/">'.'Voir les détails'.'</a></td>';
                     echo '</tr>';
                 }
             }
@@ -45,7 +44,9 @@
         else{
             echo "Aucun droit trouvé.";
         }
+
     ?>
     </table>
+    
 </body>
 </html>
