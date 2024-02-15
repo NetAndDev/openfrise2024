@@ -38,14 +38,4 @@ class HyphenModel extends Model
     {
         return $this->select(implode(',', $field))->get()->getResultArray();
     }
-
-
-    /**public function getHyphen($id = false)
-    {
-        if ($id === false) {
-            return $this->findAll();
-        } 
-
-        return $this->where(['id_hyphen' => $id])->first();
-    }**/
 }

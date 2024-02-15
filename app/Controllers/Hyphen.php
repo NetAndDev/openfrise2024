@@ -20,8 +20,6 @@ class Hyphen extends BaseController
         $model = model('HyphenModel');
 
         $array_test = array (
-            'id_timeline',
-            'id_hyphen',
             'date_begin',
             'date_end',
             'comment'
