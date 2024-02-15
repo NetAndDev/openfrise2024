@@ -40,7 +40,6 @@ class Media extends BaseController
             'code_license' => $_POST['code_license'],
             'code_type_media'=>  $_POST['code_type_media'],
             'comment' => $_POST['comment']
-
         ]);
 
         return($this->display('add_success'));
