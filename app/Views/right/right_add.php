@@ -21,5 +21,6 @@
         <li><a href="/right/menu">Retour au menu</a></li>
         <li><a href="/right/list">Liste des rôles</a></li>
         </ul>
+    <!--mais c'est scandaleusement facile ton truc-->
 </body>
 </html>
