@@ -1,1 +1,1 @@
-<p>Le nouveau level a été ajouté avec succès</p>
+<label>Le nouveau level a été ajouté avec succès</label>
