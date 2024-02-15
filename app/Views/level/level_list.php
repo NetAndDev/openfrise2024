@@ -1,3 +1,5 @@
+<p><a href="<?= env('app.baseURL') ?>menu/">Menu</a></p>
+
 <table>
         <tr>
             <th>label</th>
@@ -11,7 +13,7 @@
                 if(is_array($item)){
                     echo '<tr>';
                     echo '<td>'.esc($item['label']).'</td>';
-                    echo'<td>   |</td>';
+                    echo'<td>|</td>';
                     echo '<td>'.esc($item['comment']).'</td>';
                     echo '</tr>';
                 }

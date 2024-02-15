@@ -8,6 +8,9 @@ class LevelModel extends Model
 {
     protected $table = 'LEVELS';
 
+    // liste des champs autorisés pour l'insertion
+    protected $allowedFields = ['label','comment'];
+
     public function getLevel($id = false){
         
         if($id === false){

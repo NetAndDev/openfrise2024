@@ -5,6 +5,6 @@
 </head>
 <body>
     <h1><?= esc($title) ?></h1>
-
-    <p><a href="<?= env('app.baseURL') ?>menu/">Menu</a></p
+        
+    
     

@@ -30,6 +30,18 @@ class Level extends BaseController
             . view('templates/footer',$data);
     }
 
+    public function insert()
+    {
+        $model = model(LevelModel::class);
+
+        $model->save([
+        'label' => $_POST['label'],
+        'comment' => $_POST['comment'],
+        ]);
+
+        return($this->view('add_success'));
+        }
+
 
 
 }
