@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>BDD TYPES MEDIAS</title>
   <link href="../../../public/style/style.css" rel="stylesheet">
+
   <style>
     form {
     width: 500px;
@@ -50,27 +51,36 @@
     font-weight: bold;
   }
   </style>
+
 </head>
 <body>
-<form action="lienTypeMedia.php" method="post">
+    <p><a href="<?= env('app.baseURL') ?>type_media/">Menu</a></p>
 
-  <h1>Ajouter votre enregistrement</h1>
+   
+            <h1>Ajout d'un Type Média</h1>
 
-  <label>Code type média</label><br>
-  <input type="text" name="Code type média">
+<form action="<?= env('app.baseURL') ?>type_media/insert" method="POST" > <p>
 
-  <label>label</label><br>
-  <input type="text" name="label">
 
-  <label>icon</label><br>
-  <input type="text" name="icon"><br>
-  <input type="file" name="parcourir" id="parcourir" accept=".doc,.docx,.pdf,.xls,.xlsx">
 
-  <label>icon_ori</label><br>
-  <input type="text" name="icon_ori">
 
-  <label>comment</label><br>
-  <input type="text" name="comment">
+
+<h1>Ajouter votre enregistrement</h1>
+
+<label>Code type média</label><br>
+<input type="text" name="code_type_media">
+
+<label>label</label><br>
+<input type="text" name="label">
+
+<label>icon</label><br>
+<input type="file" name="parcourir" id="parcourir" accept=".doc,.docx,.pdf,.xls,.xlsx">
+
+<label>icon_ori</label><br>
+<input type="text" name="icon_ori">
+
+<label>comment</label><br>
+<input type="text" name="comment">
 
 
 

@@ -54,13 +54,12 @@
 echo'<table>
     <thead>
         <tr>
-            <th>Code type média</th>
+           
             <th>Label</th>
             <th>Icon</th>
-            <th>Icon ori</th>
             <th>Comment</th>
-            <th>Date create</th>
-            <th>Date update</th>
+            <th>detail</th>
+            
             
         </tr>
         </thead>';
@@ -68,17 +67,23 @@ echo'<table>
 for ($i = 0; $i < count($chart); $i++) {
     $item = $chart[$i];
     echo "<tr>";
-    echo "<td>{$item['code_type_media']}</td>";
+    //echo "<td>{$item['code_type_media']}</td>";
     echo "<td>{$item['label']}</td>";
     echo "<td>{$item['icon']}</td>";
-    echo "<td>{$item['icon_ori']}</td>";
+    //echo "<td>{$item['icon_ori']}</td>";
     echo "<td>{$item['comment']}</td>";
-    echo "<td>{$item['date_create']}</td>";
-    echo "<td>{$item['date_update']}</td>";
+    //echo "<td>{$item['date_create']}</td>";
+    //echo "<td>{$item['date_update']}</td>";
+   
+   
+                    echo '<td><a href="/type_media/detail?id='.esc($item['label']).'">'.'Détails'.'</a></td>';
+                    echo '</tr>';
     echo "</tr>";
 }
 echo '</table>';
 ?>
+
+<a href="/type_media/detail">detail </a><br>
 
 
     

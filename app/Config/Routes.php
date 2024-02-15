@@ -10,7 +10,8 @@ use App\Controllers\Type_media;
 $routes->get('/', 'Home::index');
 
 
-$routes->get('type_media', [Type_media::class, 'display']);
+$routes->get('type_media', [Type_media::class, 'index']);
+$routes->post('type_media/insert', [Type_media::class, 'insert']);
 $routes->get('type_media/(:segment)', [Type_media::class, 'display']);
 
 

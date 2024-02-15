@@ -6,6 +6,12 @@ use CodeIgniter\Exceptions\PageNotFoundException; // Add this line
 
 class Type_media extends BaseController
 {
+    public function index()
+    {
+        return view("type_media/Type_media_link");
+    }
+
+
     public function display($page = 'link')
     {
         if (! is_file(APPPATH . 'Views/type_media/Type_media_' . $page . '.php')) {
@@ -40,4 +46,20 @@ class Type_media extends BaseController
           
         return view('type_media/Type_media_'.$page, $data);
     }
+    public function insert() {
+        
+        $MonModel = model(TypemediaModel::class);
+      
+        $MonModel ->save([
+                'code_type_media' => $_POST['code_type_media'],
+                'label'  => $_POST['label'],
+               // 'icon'  => $_POST['icon'],
+                'icon_ori'  => $_POST['icon_ori'],
+                'comment'  => $_POST['comment'],
+                //'date_create'  => $_POST['date_create'],
+                //'date_update'  => $_POST['date_update']
+                 ] );
+
+                 return($this->display('add_success')); 
+}
 }

@@ -6,6 +6,9 @@ class TypemediaModel extends Model
 { 
     protected $table = 'TYPES_MEDIAS';
 
+    // liste des champs autorisés pour l'insertion
+    protected $allowedFields = ['code_type_media', 'label','icon', 'icon_ori', 'comment'];
+
     public function getTypemedia($id = false)
     {
         if ($id === false){
@@ -24,4 +27,5 @@ class TypemediaModel extends Model
     {
         return $this->select($data)->findAll();
     }
-}
+ }
+ 

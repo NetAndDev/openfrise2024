@@ -1,30 +1,42 @@
 <!doctype html>
-<html lang="fr">
+<html>
 <head>
-  <meta charset="utf-8">
-  <title>Types de médias</title>
- 
-  <a href="/type_media/"> Menu </a> <br> 
-  
-  <?php
-     if (! empty($type_media) && is_array($type_media))
-     {
-        foreach ($type_media as $TM)
-        {
-            if (is_array($TM))
-            {
-                echo '<p>'.esc($TM['code_type_media']).'</p>'."\n";
-            }
+    <title>Détails</title>
+</head>
+
+
+<body>
+        <ul>
+        <li><a href="/type_media/link">Retour au menu</a></li>
+        <li><a href="/type_media/add">Ajouter des rôles</a></li>
+        </ul>
+    <h1>Détails</h1>
+    <a href="/type_media/list/">Liste</a>
+    <br>
+    <table>
+    <tr>
+            <th>code_type_media</th>
+            <th>Label</th>
+            <th>Icon</th>
+            <th>Comment</th>
+            <th>detail</th>
+            
+    </tr>
+    <?php
+        if (!empty($detail) && is_array($detail)){
+        
+                if(is_array($detail)){
+                    echo '<tr>';
+                    echo '<td><strong>'.esc($detail['label']).'</td>';
+                    echo '</tr>';
+                }
         }
-     }
+        else{
+            echo "Aucun droit trouvé.";
+        }
 
-     else 
-
-     {
-        echo '<p> Aucun type de media trouvé </p>'."\n"; 
-     } 
-  ?> 
-
-   </body> 
-
+    ?>
+    </table>
+    
+</body>
 </html>
