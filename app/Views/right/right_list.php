@@ -22,12 +22,12 @@
         <li><a href="/right/add">Ajouter des rôles</a></li>
         </ul>
     <h1>Liste</h1>
-    <a href="/right/detail/">Voir les détails</a>
-    <br><br>
+    <br>
     <table>
     <tr>
-        <th>Rôle</th>
+        <th>Rôles</th>
         <th>Commentaire</th>
+        <th>Voir les détails</th>
     </tr>
     <?php
         if (!empty($right) && is_array($right)){
@@ -37,6 +37,7 @@
                     echo '<tr>';
                     echo '<td><strong>'.esc($item['label']).'</strong></td>';
                     echo '<td>'.esc($item['comment']).'</td>';
+                    echo '<td><a href="/right/detail?id='.esc($item['id_right']).'">'.'Détails'.'</a></td>';
                     echo '</tr>';
                 }
             }

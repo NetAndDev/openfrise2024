@@ -23,7 +23,7 @@
         </ul>
     <h1>Détails</h1>
     <a href="/right/list/">Liste</a>
-    <br><br>
+    <br>
     <table>
     <tr>
         <th>ID</th>
@@ -31,17 +31,15 @@
         <th>Dernière modification</th>
     </tr>
     <?php
-        if (!empty($right) && is_array($right)){
+        if (!empty($detail) && is_array($detail)){
         
-            foreach($right as $item){
-                if(is_array($item)){
+                if(is_array($detail)){
                     echo '<tr>';
-                    echo '<td><strong>'.esc($item['id_right']).'</strong></td>';
-                    echo '<td>'.esc($item['date_create']).'</td>';
-                    echo '<td>'.esc($item['date_update']).'</td>';
+                    echo '<td><strong>'.esc($detail['id_right']).'</strong></td>';
+                    echo '<td>'.esc($detail['date_create']).'</td>';
+                    echo '<td>'.esc($detail['date_update']).'</td>';
                     echo '</tr>';
                 }
-            }
         }
         else{
             echo "Aucun droit trouvé.";
