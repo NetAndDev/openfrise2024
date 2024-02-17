@@ -10,24 +10,31 @@
 <body>
     <?php
 
-    echo '<br>';
-    echo '<div class="mael">';
-    echo '<table><tr>';
-    foreach ($fields as $name) {
-        echo '<th>' . $nom[$name] . '</th>';
+    try {
+        echo '<div class="mael">';
+        echo '<table><tr>';
+        foreach ($fields as $name) {
+            echo '<th>' . $nom[$name] . '</th>';
+        }
+        echo '</tr>';
+        echo '<tr>';
+        try {
+            foreach ($value as $data) {
+                $value['is_ponctual'] = 0 ? 'Vrai' : 'Faux';
+                echo '<td>' . $data . '</td>';
+            }
+        } catch (\Throwable $th) {
+            foreach ($fields as $name) {
+                echo '<td>' . 'ERR' . '</td>';
+            }
+        }
+        echo '</tr>';
+        echo '</table>';
+        echo '</div>';
+    } catch (\Throwable $th) {
+        echo 'Erreur';
     }
-    echo '</tr>';
-    echo '<tr>';
-    foreach ($value as $data) {
 
-        $value['is_ponctual'] = 0 ? 'Vrai' : 'Faux';
-
-        echo '<td>' . $data . '</td>';
-    }
-    echo '</tr>';
-    echo '</table>';
-    echo '</div>';
-    //print_r($test);
     ?>
 </body>
 

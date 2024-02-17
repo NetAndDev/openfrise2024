@@ -3,33 +3,42 @@
 
 namespace App\Controllers;
 
+
 class Form extends BaseController
 {
     protected $helpers = ['form'];
 
-    public function index()
+    public function index(): string
     {
+        helper('form');
+
         // si ce n'est pas un ppost
-        if (! $this->request->is('post')) {
-            return view('signup');
+        if (!$this->request->is('post')) {
+            return view('event/event_menu');
         }
 
         // règles commme VARCHAR(50)
         $rules = [
-            // @TODO
+            
+
         ];
 
         // je comprend pas trop 
+        /*
         $data = $this->request->getPost(array_keys($rules));
 
         // si les données ne sont pas conforme aux règles alors
-        if (! $this->validateData($data, $rules)) {
-            return view('signup');
+
+        if (!$this->validateData($data, $rules)) {
+            return view('event/event_insert', $data);
         }
+
 
         // If you want to get the validated data.
         $validData = $this->validator->getValidated();
-
-        return view('success');
+        */
+        
+        $data['maellll'] = $this->request->getPost(['label']);
+        return view('event/event_insert', $data);
     }
 }

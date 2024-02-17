@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Controllers;
 
 use CodeIgniter\Exceptions\PageNotFoundException;
@@ -12,6 +11,8 @@ class Event extends BaseController
             // Whoops, we don't have a page for that!
             throw new PageNotFoundException($page);
         }
+        helper('form');
+
 
         $model_mael = model('EventModel');
         $nom = array(
@@ -32,24 +33,7 @@ class Event extends BaseController
             'nom' => $nom
         ];
 
-        /*
-        si page = add (si on va sur add)
-        alors
-        avec le $POST (car acction="")
-        faire des tests par apport u contenu de $POST
-        si c'est bon
-        alors
-        model->insert(Array)
 
-        ou mettre ces tests dans le modèle 
-        donc appeler une proc qui ferait ça
-        */
-        if ($page == 'add') {
-            if (!empty($this->request->getPost())) {
-                $data = $this->request->getPost();
-                //array_push($data, $this->request->getPost());
-            }
-        }
         $get = $this->request->getGet();
         if ($page == 'detail') {
             if (!empty($this->request->getGet()['id_event'])) {
@@ -64,4 +48,6 @@ class Event extends BaseController
 
         return view('event/event_' . $page, $data);
     }
+
+    
 }
