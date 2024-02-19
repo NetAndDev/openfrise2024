@@ -12,33 +12,27 @@ class Form extends BaseController
     {
         helper('form');
 
-        // si ce n'est pas un ppost
         if (!$this->request->is('post')) {
             return view('event/event_menu');
         }
 
-        // règles commme VARCHAR(50)
+        // AFAIRE
+        // gérer les erreurs pour retourner des valeurs par défaut
+        // là c'est des str '' qui sont retrounés pas NULL
         $rules = [
-            
-
+            'label' => 'max_length[100]',
+            'sublabel' => 'max_length[100]',
+            'is_ponctual' => 'in_list[0,1]', // plus simple que d'ajouter plein de règles
+            'date_begin' => 'max_length[50]',
+            'date_end' => 'max_length[50]',
+            'comment' => 'max_length[500]'
         ];
-
-        // je comprend pas trop 
-        /*
         $data = $this->request->getPost(array_keys($rules));
 
-        // si les données ne sont pas conforme aux règles alors
-
         if (!$this->validateData($data, $rules)) {
-            return view('event/event_insert', $data);
+            return view('event/event_menu');
         }
 
-
-        // If you want to get the validated data.
-        $validData = $this->validator->getValidated();
-        */
-        
-        $data['maellll'] = $this->request->getPost(['label']);
         return view('event/event_insert', $data);
     }
 }

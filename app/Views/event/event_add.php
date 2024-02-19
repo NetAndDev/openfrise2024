@@ -29,7 +29,7 @@
                     echo '<label for="' . $name . '">' . $nom[$name] . ':</label>';
                     echo '</td>';
                     echo '<td>';
-                    echo '<input type="text" id="' . $name . '">';
+                    echo '<input type="text" id="' . $name . '" name="'. $name .'">';
                     echo '</td>';
                     echo '</tr>';
                 }
