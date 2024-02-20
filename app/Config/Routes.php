@@ -9,6 +9,5 @@ use App\Controllers\Home;
  */
 $routes->get('/', [Home::class, 'index']);
 $routes->get('event', [Event::class, 'display']);
-
-$routes->post('event/insert', [Form::class, 'index']);
+$routes->post('event/insert', [Event::class, 'insert']);
 $routes->get('event/(:segment)', [Event::class, 'display']);
