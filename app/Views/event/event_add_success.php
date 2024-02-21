@@ -10,6 +10,11 @@
 <body>
     <h1>Vous avez ajouté :</h1>
     <?php
+    /*    
+    echo '<pre>';
+    print_r(get_defined_vars());
+    echo '</pre>';
+    */
     $array_test = array(
         'label',
         'sublabel',
@@ -18,7 +23,7 @@
         'date_end',
         'comment'
     );
-
+    unset($value['id_timeline']);
     echo '<div class="mael">';
     echo '<table><tr>';
     foreach ($fields as $name) {

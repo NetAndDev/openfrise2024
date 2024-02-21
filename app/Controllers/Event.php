@@ -14,8 +14,6 @@ class Event extends BaseController
             // Whoops, we don't have a page for that!
             throw new PageNotFoundException($page);
         }
-        helper('form');
-
 
         $model_mael = model('EventModel');
         $nom = array(
@@ -33,7 +31,8 @@ class Event extends BaseController
         $data = [
             'fields' => $model_mael->getFieldsNames(),
             'value' => $model_mael->getValue(),
-            'nom' => $nom
+            'nom' => $nom,
+            'timeline' => $model_mael->getTimelines()
         ];
 
 
@@ -75,9 +74,10 @@ class Event extends BaseController
         // là c'est des str '' qui sont retrounés pas NULL
         // insert dans le model !!
         $rules = [
+            'id_timeline' => 'max_length[100]',
             'label' => 'max_length[100]',
             'sublabel' => 'max_length[100]',
-            'is_ponctual' => 'in_list[0,1]', // plus simple que d'ajouter plein de règles
+            'is_ponctual' => 'max_length[100]', // plus simple que d'ajouter plein de règles
             'date_begin' => 'max_length[50]',
             'date_end' => 'max_length[50]',
             'comment' => 'max_length[500]'
@@ -95,7 +95,8 @@ class Event extends BaseController
             $data = [
                 'fields' => $model_mael->getFieldsNames(),
                 'value' => $model_mael->getValue(),
-                'nom' => $nom
+                'nom' => $nom,
+                'timeline' => $model_mael->getTimelines()
             ];
             return view('event/event_add', $data);
         } else {
@@ -104,6 +105,9 @@ class Event extends BaseController
                 'value' => $this->request->getPost(array_keys($rules)),
                 'nom' => $nom
             ];
+            // marche pas car y'a pas d'autoincrément pour l'id_event..
+            // je sais pas si c'est normal
+            //$model_mael->insert($this->request->getPost(array_keys($rules)));
             return view('event/event_add_success', $data);
         }
     }
