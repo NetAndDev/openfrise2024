@@ -8,6 +8,7 @@
 </head>
 
 <body>
+    <h1>Détails</h1>
     <?php
 
     try {
