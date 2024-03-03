@@ -37,7 +37,7 @@ class Event extends BaseController
 
 
         $get = $this->request->getGet();
-        if ($page == 'detail') {
+        if ($page == 'detail' OR $page == 'update_line') {
             if (!empty($this->request->getGet()['id_event'])) {
                 $data = [
                     'fields' => $model_mael->getFieldsNames(),

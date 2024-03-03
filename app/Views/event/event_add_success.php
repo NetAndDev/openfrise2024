@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>MENU</title>
+    <title>SUCCESS</title>
     <link rel="stylesheet" href="<?= base_url(); ?>styles/default/styles.css">
 
 </head>
