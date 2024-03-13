@@ -32,6 +32,11 @@ class Timeline extends BaseController
         $model = model('App\Models\TimelineModel');
         $data['timeline'] = $model->getTimeline();
 
+        if($page == 'detail'){
+            $detail = $this->request->getGet();
+            $data['detail'] = $model->gettimeline($detail); 
+        }
+
         return view('/timeline/timeline_'.$page, $data); //$data: ['numero' => 123]
     }
 

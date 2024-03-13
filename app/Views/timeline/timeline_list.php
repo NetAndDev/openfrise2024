@@ -43,6 +43,7 @@ td
             <th> Date de début</th>
             <th> Date de fin </th>
             <th> Commentaire </th>
+            <th> Détail </th>
         </tr>
 <?php
  
@@ -70,6 +71,7 @@ td
             echo '<td>'.esc($item['date_begin']).'</td>';
             echo '<td>'.esc($item['date_end']).'</td>';
             echo '<td>'.esc($item['comment']).'</td>';
+            echo '<td><a href="detail?id='.esc($item['id_timeline']).'">Lien</a>';
             echo '</tr>';
         }
     }
@@ -79,9 +81,6 @@ else{
 }
 
 ?>
-</table>
-        <ul>
-        <li><a href="/timeline/detail">Detail</a></li> 
-        </ul>
+       </table>
     </body>
 </html>
