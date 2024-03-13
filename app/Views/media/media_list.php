@@ -25,7 +25,8 @@
                     echo '<td>'.esc($item['legend']).'</td>';
                     echo '<td><a href='.esc($item['source']).'>'.esc($item['source']).'</a></td>';
                     echo '<td>'.esc($item['filename']).'</td>';
-                    echo '<td><a href="detail?id='.esc($item['id_media']).'">Lien</a>';
+                    echo '<td><a href="detail?id_media='.esc($item['id_media']).'">Détail</a><br>
+                        <a href="update?id_media='.esc($item['id_media']).'">Modifier</a></td>';
                     echo '</tr>';
                 }
             }

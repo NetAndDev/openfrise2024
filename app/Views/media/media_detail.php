@@ -5,6 +5,7 @@
 </head>
 <body>
     <?php
+
         if (!empty($detail) && is_array($detail)){
             echo '<h1>Détail de '.$detail['label'].'</h1>';
 

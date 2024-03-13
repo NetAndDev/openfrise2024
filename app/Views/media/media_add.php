@@ -30,7 +30,7 @@
             <option value="4">Document</option>
         </select><br>
         <label>Commentaire</label><br>
-        <input type="text" name="comment"><br>
+        <input type="text" name="comment" required><br>
         <input type="submit" Value="Envoyer">
     </form>
 </body>

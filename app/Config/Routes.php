@@ -9,4 +9,5 @@ use App\Controllers\Media;
 $routes->get('/', 'Home::index');
 $routes->get('/media', [Media::class, 'display']);
 $routes->post('/media/insert', [Media::class, 'insert']);
+$routes->post('/media/update', [Media::class, 'update']);
 $routes->get('/media/(:segment)', [Media::class, 'display']);

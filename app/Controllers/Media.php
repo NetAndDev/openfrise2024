@@ -19,7 +19,7 @@ class Media extends BaseController
         $model = model('App\Models\MediaModel');
         $data['media'] = $model->getMedia();
 
-        if($page == 'detail'){
+        if($page == 'detail' || $page == 'update'){
             $detail = $this->request->getGet();
             $data['detail'] = $model->getMedia($detail); 
         }
@@ -42,6 +42,26 @@ class Media extends BaseController
             'comment' => $_POST['comment']
         ]);
 
+        // Appelle la fonction display pour afficher la page media_add_success
         return($this->display('add_success'));
+    }
+
+    public function update(){
+
+        $model = model('App\Models\MediaModel');
+
+        $model->replace(['id_media' => $_POST['id_media'],
+            'label' => $_POST['label'],
+            'sublabel' => $_POST['sublabel'],
+            'legend' => $_POST['legend'],
+            'source' => $_POST['source'],
+            'filename_ori' => $_POST['filename_ori'],
+            'code_license' => $_POST['code_license'],
+            'code_type_media'=>  $_POST['code_type_media'],
+            'comment' => $_POST['comment']
+        ]);
+
+        // Appelle la fonction display pour afficher la page media_update_success
+        return($this->display('update_success'));
     }
 }
