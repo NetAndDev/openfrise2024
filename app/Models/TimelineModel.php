@@ -29,6 +29,6 @@ class TimelinetModel extends Model
     {
         return $this->select(implode(',', $field))->get()->getResultArray();
     }*/
-
+     
 }
  

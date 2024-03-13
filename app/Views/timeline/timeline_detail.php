@@ -1,18 +1,19 @@
 <!doctype html>
 <html lang=fr>
 <head>
+<link rel="stylesheet" href="<?= base_url(); ?>styles/default/styles.css?<?= uniqid() ?>">
     <title>Page de détail</title>
 </head>
 <body>
 
 <ul>
-        <li><a href="/timeline/list">List</a></li>
+        <li><a href="/timeline/list">Liste</a></li>
         <li><a href="/timeline/menu">Menu</a></li> 
         </ul>
 <?php
 
  if (!empty($detail) && is_array($detail)){
-    echo '<h1>Détail de '.$detail['label'].'</h1>';
+    echo '<h1>Détail de : '.$detail['label'].'</h1>';
 }
 
 echo '<p>id timeline : '.$detail['id_timeline'].'</p>';

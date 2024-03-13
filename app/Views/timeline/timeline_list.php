@@ -1,9 +1,11 @@
 <!doctype html>
 <html lang="fr">
 <head>
-  <link href="../../../public/style/style.css" rel="stylesheet">
+<link rel="stylesheet" href="<?= base_url(); ?>style/default/style.css?<?= uniqid() ?>">
   <meta charset="utf-8">
   <title>Timeline</title>
+</head>
+<body>
 <style>
 
 table
@@ -25,13 +27,7 @@ td
     	padding: 5px;
 		text-align:center;
 }
-
-</style>
-
-</head>
-
-<body>
-    
+    </style>
         <a href="/timeline/"> Menu </a> <br>
 
         <h1>" Affichage des frises "</h1>
@@ -81,6 +77,6 @@ else{
 }
 
 ?>
-       </table>
+             </table>
     </body>
 </html>
