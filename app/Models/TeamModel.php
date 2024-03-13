@@ -8,12 +8,15 @@ class TeamModel extends Model
 {
     protected $table = 'TEAMS';
 
-    public function getTeam ($id = false)
-    {
-        if ($id === false) {
+    protected $allowedFields = ['id_team','name','comment','date_create','date_update'];
+
+
+    public function getTeam($id = false){
+        
+        if($id === false){
             return $this->findAll();
         }
-        return  $this->where(['id_team' => $id])->first();
+        return $this->where(['id_team' => $id])->first();
     }
 
     public function teamName($field = array (0 => '*'))

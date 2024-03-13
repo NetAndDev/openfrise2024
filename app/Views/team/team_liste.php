@@ -24,7 +24,10 @@
     <table>
         <tr>
             <th>Id</th>
-            <th>Team</th>
+            <th>Nom équipe</th>
+            <th>Commentaire</th>
+            <th>Date de création</th>
+            <th>Date de modification</th>
         </tr>
         <?php
         if (!empty($data_n) && is_array($data_n)) {
@@ -32,8 +35,13 @@
                 echo '<tr>';
                 echo '<td>' . $data['id_team'] . '</td>';
                 echo '<td>' . $data['name'] . '</td>';
-                // echo '<td>' . $data['creation_date'] . '</td>'; 
+                echo '<td>' . $data['comment'] . '</td>';
+                echo '<td>' . $data['date_create'] . '</td>';
+                echo '<td>' . $data['date_update'] . '</td>'; 
                 echo '</tr>';
+            }
+            else {
+                echo "Aucun enregistrement trouvé.";
             }
         }
         ?>
