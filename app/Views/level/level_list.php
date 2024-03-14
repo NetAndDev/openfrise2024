@@ -3,9 +3,7 @@
 <table>
         <tr>
             <th>Poste</th>
-            <th>|</th>
             <th>Commentaire</th>
-            <th>|</th>
             <th>Détail</th>
         </tr>
     <?php
@@ -15,9 +13,7 @@
                 if(is_array($item)){
                     echo '<tr>';
                     echo '<td>'.esc($item['label']).'</td>';
-                    echo'<td>|</td>';
                     echo '<td>'.esc($item['comment']).'</td>';
-                    echo '<td>|</td>';
                     echo '<td><a href="detail?id_level='.esc($item['id_level']).'">Détail</a><br>';
                     echo '</tr>';
                 }

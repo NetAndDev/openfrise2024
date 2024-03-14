@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-    <title>CodeIgniter Tutorial</title>
+    <title>Levels</title>
     <link rel="stylesheet" href="<?=base_url();?>/styles/default/style.css"/>
 </head>
 <body>

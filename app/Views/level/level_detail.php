@@ -1,7 +1,7 @@
 <?php
 
         if (!empty($detail) && is_array($detail)){
-            echo '<h1>Détail de '.$detail['label'].'</h1>';
+            echo '<h2>Détail de '.$detail['label'].'</h2>';
 
             if(!empty($detail['comment'])){
                 echo '<p>Commentaire : '.$detail['comment'].'</p>';
