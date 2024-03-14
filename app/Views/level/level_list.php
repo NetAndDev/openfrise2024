@@ -12,9 +12,9 @@
             foreach($level as $item){
                 if(is_array($item)){
                     echo '<tr>';
-                    echo '<td>'.esc($item['label']).'</td>';
+                    echo '<td>'.esc($item['poste']).'</td>';
                     echo'<td>|</td>';
-                    echo '<td>'.esc($item['comment']).'</td>';
+                    echo '<td>'.esc($item['commentaire']).'</td>';
                     echo '</tr>';
                 }
             }
