@@ -36,9 +36,10 @@ if($page == 'detail'){
 public function insert()
 {
  $model = model('App\Models\LicenseModel');
-
+ 
  $model->save([
- 'title' => $_POST['title'],
+ 'code_license' => $_POST['code_license'], 
+'title' => $_POST['title'],
  'filename' => $_POST['filename'],
  'filename_ori' => $_POST['filename_ori'],
  'icon' => $_POST['icon'],
@@ -48,4 +49,22 @@ public function insert()
 
  return($this->display('add_success'));
  }
+ public function update(){
+
+    $model = model('App\Models\MediaModel');
+
+    $model->replace(['code_license' => $_POST['code_license'],
+        'title' => $_POST['title'],
+        'filename' => $_POST['filename'],
+        'filename_ori' => $_POST['filename_ori'],
+        'icon' => $_POST['icon'],
+        'icon_ori' => $_POST['icon_ori'],
+        'comment' => $_POST['comment'],
+               
+    ]);
+
+    // Appelle la fonction display pour afficher la page license_update_success
+    return($this->display('update_success'));
+}
+
 }

@@ -10,7 +10,7 @@
 
     <form action="<?= env('app.baseURL') ?>license/insert" method="POST">
       <label>le nom de la licence :</label>
-   <input name= "license" id="license" type="text" <br>
+   <input name= "license" id="license" type="text">
 
    <label>le titre :</label>
    <input name="title" id="title" type="text" required><br>
@@ -39,7 +39,7 @@
 
 
 
-   <p><input name="submit" type="submit" value="Valider"></p>
+   <input name="submit" type="submit" value="Valider">
 </form>
 
 </body>
