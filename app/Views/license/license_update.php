@@ -26,7 +26,7 @@
                 <input type="submit" Value="Envoyer">';
         }
         else{
-            echo "Aucun média sélectionné.";
+            echo "Aucune licence sélectionné.";
         }
         ?>
             </form>
