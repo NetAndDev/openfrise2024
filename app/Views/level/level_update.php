@@ -7,7 +7,7 @@
                 <input type="text" name="label" value="'.$detail['label'].'" required><br>
                 <label>Commentaire</label><br>
                 <input type="text" name="comment" value="'.$detail['comment'].'" ><br>
-                <input type="submit" Value="Envoyer">';
+                <input type="submit" Value="Modifier">';
         }
         else{
             echo "Aucun média sélectionné.";

@@ -1,1 +1,2 @@
-<label>Le rôle a bien été modifier</label>
+
+    <p>La Team a été Mis à jour avec succès.</p>
