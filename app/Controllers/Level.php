@@ -54,7 +54,9 @@ class Level extends BaseController
 
         $model->replace(['id_level'=> $_POST['id_level'],
         'label' => $_POST['label'],
-        'comment' => $_POST['comment']
+        'comment' => $_POST['comment'],
+        'date_create' => $_POST['date_create'],
+        'date_update' => $_POST['date_update']
         ]);
 
         return($this->view('update_sucess'));
