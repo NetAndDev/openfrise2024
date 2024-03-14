@@ -16,10 +16,12 @@
         <input type="texte" name="label" required><br><br>
         <label>Sous-libellé</label>
         <input type="texte" name="sublabel" required><br><br>
+       
         <label>Date de début</label>
-        <input type="texte" name="date_begin" required><br><br>
+        <input type="date" name="date_begin" required><br><br>
         <label>Date de fin</label>
-        <input type="texte" name="date_end" required><br><br>
+        <input type="date" name="date_end" required><br><br>
+
 
         <label> Est-ce public ? </label><br>
         <span class="radio">

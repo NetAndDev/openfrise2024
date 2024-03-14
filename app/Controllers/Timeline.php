@@ -19,10 +19,8 @@ class Timeline extends BaseController
         return view('timeline/timeline_' . $page);
     }
 
-
-   
     public function display($page = 'menu')
-     { 
+    { 
 
         if (! is_file(APPPATH . 'Views/timeline/timeline_' . $page . '.php')) {
             // Whoops, we don't have a page for that!
@@ -32,7 +30,7 @@ class Timeline extends BaseController
         $model = model('App\Models\TimelineModel');
         $data['timeline'] = $model->getTimeline();
 
-        if($page == 'detail'){
+        if($page == 'detail'|| $page == 'update'|| $page == 'delete'){
             $detail = $this->request->getGet();
             $data['detail'] = $model->gettimeline($detail); 
         }
@@ -40,29 +38,9 @@ class Timeline extends BaseController
         return view('/timeline/timeline_'.$page, $data); //$data: ['numero' => 123]
     }
 
-        
-        /*$model_time = model('TimelineModel');
-        $array_test = array (
-            'label',
-            'sublabel',
-            'date_begin',
-            'date_end',
-            'comment' 
-        );
-        $data = [
-            'fields' => $model_time->getFieldsNames($array_test),
-            'value' => $model_time->getValue($array_test),
-        ];
-        
-        
-        return view('timeline/timeline_'.$page, $data);
-    }
-}*/
-   
-
     public function insert()
-{
-     $model = model(TimelineModel::class);
+    {
+    $model = model(TimelineModel::class);
 
     $model->save([
          'label' => $_POST['label'],
@@ -70,10 +48,34 @@ class Timeline extends BaseController
          'date_begin' => $_POST['date_begin'],
          'date_end' => $_POST['date_end'], 
          'is_public' => $_POST['is_public'],
-         'comment' => $_POST['comment'],
- 
- ]);
+         'comment' => $_POST['comment'], ]);
 
       return($this->display('add_success'));
- }
+    }
+
+    public function update()
+    {
+    //$model = model('App\Models\TimelineModel');
+    $model = model(TimelineModel::class);
+
+    $model->replace(['id_timeline' => $_POST['id_timeline'],
+        'label' => $_POST['label'],
+        'sublabel' => $_POST['sublabel'],
+        'date_begin' => $_POST['date_begin'],
+        'date_end' => $_POST['date_end'],
+        'comment' => $_POST['comment'], ]);
+
+    // Appelle la fonction display pour afficher la page media_update_success
+    return($this->display('update_success'));
+    }
+    
+    public function delete()
+    {
+        $model = model(TimelineModel::class);
+
+        $model->replace(['id_timeline' => $_POST['id_timeline'],]);
+
+    return $this->display('delete_success');
+}
+
 }

@@ -48,7 +48,7 @@
             echo '<td>'.esc($item['comment']).'</td>';
             echo '<td><a href="detail?id_timeline='.esc($item['id_timeline']).'">Détail</a></td>';
             echo '<td><a href="update?id_timeline='.esc($item['id_timeline']).'">Modifier</a><br>
-                        <a href="update?id_timeline='.esc($item['id_timeline']).'">Supprimer</a></td>';
+                        <a href="delete?id_timeline='.esc($item['id_timeline']).'">Supprimer</a></td>';
             echo '</tr>';
         }
     }

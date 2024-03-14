@@ -6,10 +6,9 @@
 </head>
 <body>
         <h1>Succès</h1>
-        <p> La frise a bien été ajoutée !</p>
+        <p> La frise a bien été supprimée !</p>
 
         <ul>
-        <li><a href="/timeline/add">Retour à l'ajout d'une frise</a></li>
         <li><a href="/timeline/list">Retour à la liste des frises</a></li>
         <li><a href="/timeline/menu">Retour au Menu</a></li> 
         </ul>
