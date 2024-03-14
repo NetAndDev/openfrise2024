@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="fr">
 <head>
+<link rel="stylesheet" href="<?= base_url(); ?>style/default/style.css">
   <meta charset="utf-8">
   <title>Timeline</title>
 
@@ -16,7 +17,10 @@
    
 
      
-
+<footer>
+    <p>&copy; 2024 OpenFrise </p>
+    
+</footer>
 
     </body>
 </html> 

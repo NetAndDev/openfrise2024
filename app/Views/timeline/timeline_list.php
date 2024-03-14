@@ -1,33 +1,11 @@
 <!doctype html>
 <html lang="fr">
 <head>
-<link rel="stylesheet" href="<?= base_url(); ?>style/default/style.css?<?= uniqid() ?>">
+<link rel="stylesheet" href="<?= base_url(); ?>style/default/style.css">
   <meta charset="utf-8">
   <title>Timeline</title>
 </head>
 <body>
-<style>
-
-table
-{
-	border: 1px solid black;
-	border-collapse: collapse;
-}
-
-th
-{
-	border: 1px solid black;
-	color: black;
-    	padding: 5px;
-	background-color: #7FCBD6;  
-}
-td
-{
-	border: 1px solid black;
-    	padding: 5px;
-		text-align:center;
-}
-    </style>
         <a href="/timeline/"> Menu </a> <br>
 
         <h1>" Affichage des frises "</h1>
@@ -40,6 +18,7 @@ td
             <th> Date de fin </th>
             <th> Commentaire </th>
             <th> Détail </th>
+            <th> Option </th>
         </tr>
 <?php
  
@@ -67,7 +46,9 @@ td
             echo '<td>'.esc($item['date_begin']).'</td>';
             echo '<td>'.esc($item['date_end']).'</td>';
             echo '<td>'.esc($item['comment']).'</td>';
-            echo '<td><a href="detail?id='.esc($item['id_timeline']).'">Lien</a>';
+            echo '<td><a href="detail?id_timeline='.esc($item['id_timeline']).'">Détail</a></td>';
+            echo '<td><a href="update?id_timeline='.esc($item['id_timeline']).'">Modifier</a><br>
+                        <a href="update?id_timeline='.esc($item['id_timeline']).'">Supprimer</a></td>';
             echo '</tr>';
         }
     }

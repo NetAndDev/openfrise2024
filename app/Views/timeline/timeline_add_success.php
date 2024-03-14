@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
 <head>
+<link rel="stylesheet" href="<?= base_url(); ?>style/default/style.css">
     <title>Succès</title>
 </head>
 <body>

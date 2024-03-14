@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang=fr>
 <head>
-<link rel="stylesheet" href="<?= base_url(); ?>styles/default/styles.css?<?= uniqid() ?>">
+<link rel="stylesheet" href="<?= base_url(); ?>style/default/style.css">
     <title>Page de détail</title>
 </head>
 <body>

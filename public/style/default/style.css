@@ -1,6 +1,6 @@
-body {
+body { 
 	background-color: #EFC620; 
-	color: #7FCBD6; 
+	color: black; 
 	
 }
 form {
@@ -48,14 +48,20 @@ select {
 	cursor: pointer;
 	font-weight: bold;
 }
-  input[type="radio"] {
-  display: inline-block; 
-  margin-right: 5px; 
+
+span {
+	display: flex;
 }
+  
+input[type="radio"] {
+	margin-right: 10px;
+}
+
 table
 {
 	border: 1px solid black;
 	border-collapse: collapse;
+	background-color: beige; 
 }
 
 th
@@ -71,3 +77,19 @@ td
     	padding: 5px;
 		text-align:center;
 }
+
+footer {
+    background-color: skyblue;
+    padding: 2px;
+    text-align: center;
+    position: fixed;
+    bottom: 0; 
+    width: 100%; 
+}
+
+footer p {
+    color: black;
+    text-decoration: none;
+}
+  
+
