@@ -40,11 +40,13 @@
                 echo '<td>' . esc($data['date_create']) . '</td>';
                 echo '<td>' . esc($data['date_update']) . '</td>'; 
                 echo '<td><a href="detail?id_team='.esc($data['id_team']).'">Détail</a><br>
-                        <a href="update?id_team='.esc($data['id_team']).'">Modifier</a></td>';
+                        <a href="update?id_team='.esc($data['id_team']).'">Modifier</a>
+                        <a href="delete?id_team='.esc($data['id_team']).'">Supprimer</a>
+                        </td>';
                 echo '</tr>';
             }
         } else {
-            echo '<tr><td colspan="5">Aucun enregistrement trouvé.</td></tr>';
+            echo 'Aucune Team trouvé.';
         }
         ?>
     </table>

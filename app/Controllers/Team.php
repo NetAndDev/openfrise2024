@@ -24,6 +24,12 @@ class Team extends BaseController
             'teamName' => $model_team->teamName(),
             'teamtest' => $model_team->teamName(['id_team','name', 'comment', 'date_create', 'date_update']),
         ];
+
+        if($page == 'detail' || $page == 'update'){
+            $detail = $this->request->getGet();
+            $data['detail'] = $model_team->getTeam($detail);    
+            
+        }
         return view('team/team_' . $page, $data);
     }
 
@@ -55,7 +61,16 @@ public function update(){
         'date_update' => $_POST['date_update']
     ]); // Work
 
-    // Appelle la fonction display pour afficher la page media_update_success
+    // Appelle la fonction display pour afficher la page team_update_success
     return($this->display('update_success'));
     }
+
+    public function delete()
+    {
+        $sql = "DELETE FROM BDD_TEAMS WHERE id_team = ?";
+        $model = model('App\Models\TeamModel');
+        $model->query($sql, [$_POST['id_team']]);
+        return $this->display('delete_success');
+    } // WORK
+    
 }
