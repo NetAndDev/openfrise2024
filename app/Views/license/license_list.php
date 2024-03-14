@@ -38,9 +38,10 @@
                     echo '<td>'.esc($item['comment']).'</td>';
                     echo '<td>'.esc($item['date_create']).'</td>';
                     echo '<td>'.esc($item['date_update']).'</td>';
-		    echo '<td><a href="detail?code_license='.esc($item['code_license']).'">Détail</a><br>
-                    <a href="update?code_license='.esc($item['code_license']).'">Modifier</a></td>';
+                    echo '<td><a href="detail?code_license='.esc($item['id_media']).'">Détail</a></td>';
+                    
                     echo '</tr>';
+
                 }
             }
         }

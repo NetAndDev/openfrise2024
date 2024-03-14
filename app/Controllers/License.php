@@ -51,7 +51,7 @@ public function insert()
  }
  public function update(){
 
-    $model = model('App\Models\MediaModel');
+    $model = model('App\Models\LicenseModel');
 
     $model->replace(['code_license' => $_POST['code_license'],
         'title' => $_POST['title'],

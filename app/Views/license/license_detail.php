@@ -38,7 +38,7 @@
     <?php
         if (!empty($detail) && is_array($detail)){
         
-                if(is_array($detail)){
+
                     echo '<tr>';
                     echo '<td><strong>'.esc($detail['code_license']).'</strong></td>';
 		    echo '<td>'.esc($detail['title']).'</td>';
@@ -49,7 +49,7 @@
                     echo '<td>'.esc($detail['date_create']).'</td>';
                     echo '<td>'.esc($detail['date_update']).'</td>';
                     echo '</tr>';
-                }
+           
         }
         else{
             echo "Aucun droit trouvé.";
