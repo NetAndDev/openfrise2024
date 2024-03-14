@@ -5,4 +5,7 @@
 </head>
 <body>
     <p>La Team a été ajouté avec succès.</p>
+    <?php
+    ?>
 </body>
+

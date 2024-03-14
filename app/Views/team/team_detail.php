@@ -14,7 +14,7 @@
             }
 
 
-            if(!empty($detail['comment'])){
+            if(!empty($detail['commentaire'])){
                 echo '<p>Commentaire : '.$detail['comment'].'</p>';
             }
             else{

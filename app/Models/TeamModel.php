@@ -10,7 +10,6 @@ class TeamModel extends Model
 
     protected $allowedFields = ['id_team','name','comment','date_create','date_update'];
 
-
     public function getTeam($id = false){
         
         if($id === false){
@@ -23,4 +22,5 @@ class TeamModel extends Model
     {
         return $this->query("SELECT " . implode(',', $field) . " FROM BDD_TEAMS")->getFieldNames();
     }
+    
 }

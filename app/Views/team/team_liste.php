@@ -30,22 +30,21 @@
             <th>Date de modification</th>
         </tr>
         <?php
-        if (!empty($data_n) && is_array($data_n)) {
-            foreach ($data_n as $data) {
-                echo '<tr>';
-                echo '<td>' . $data['id_team'] . '</td>';
-                echo '<td>' . $data['name'] . '</td>';
-                echo '<td>' . $data['comment'] . '</td>';
-                echo '<td>' . $data['date_create'] . '</td>';
-                echo '<td>' . $data['date_update'] . '</td>'; 
-                echo '</tr>';
-            }
-            else {
-                echo "Aucun enregistrement trouvé.";
-            }
+       if (!empty($data_n) && is_array($data_n)) {
+        foreach ($data_n as $data) {
+            echo '<tr>';
+            echo '<td>' . $data['id_team'] . '</td>';
+            echo '<td>' . $data['name'] . '</td>';
+            echo '<td>' . $data['comment'] . '</td>';
+            echo '<td>' . $data['date_create'] . '</td>';
+            echo '<td>' . $data['date_update'] . '</td>'; 
+            echo '</tr>';
         }
-        ?>
-    </table>
+    } else {
+        echo "<tr><td colspan='5'>Aucun enregistrement trouvé.</td></tr>";
+    }
+    ?>
+</table>
 
 </body>
 </html>
