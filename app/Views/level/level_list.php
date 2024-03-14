@@ -15,6 +15,8 @@
                     echo '<td>'.esc($item['label']).'</td>';
                     echo'<td>|</td>';
                     echo '<td>'.esc($item['comment']).'</td>';
+                    echo '<td>|</td>';
+                    echo '<td><a href="detail?id_level='.esc($item['id_level']).'">Détail</a><br>';
                     echo '</tr>';
                 }
             }
