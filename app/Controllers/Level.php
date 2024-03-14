@@ -23,6 +23,11 @@ class Level extends BaseController
         $model = model('App\Models\LevelModel');
         $data['level'] = $model->getLevel();
 
+        if($page == 'detail'){
+            $detail = $this->request->getGet();
+            $data['detail'] = $model->getMedia($detail); 
+        }
+
         $data['title'] = ucfirst($page); // Capitalize the first letter
 
         return view('templates/header', $data)
