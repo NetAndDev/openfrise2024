@@ -2,6 +2,8 @@
 
 namespace App\Controllers;
 
+use CodeIgniter\Exceptions\PageNotFoundException;
+
 class Media extends BaseController
 {
     public function menu()
@@ -19,7 +21,7 @@ class Media extends BaseController
         $model = model('App\Models\MediaModel');
         $data['media'] = $model->getMedia();
 
-        if($page == 'detail' || $page == 'update'){
+        if($page == 'detail' || $page == 'upd' || $page == 'del'){
             $detail = $this->request->getGet();
             $data['detail'] = $model->getMedia($detail); 
         }
@@ -62,6 +64,18 @@ class Media extends BaseController
         ]);
 
         // Appelle la fonction display pour afficher la page media_update_success
-        return($this->display('update_success'));
+        return($this->display('upd_success'));
+    }
+
+    public function delete(){
+
+        $model = model('App\Models\MediaModel');
+
+        $sql = "DELETE FROM BDD_MEDIAS WHERE id_media = ?";
+
+        $model->query($sql, $_POST['id_media']);
+
+        // Appelle la fonction display pour afficher la page media_update_success
+        return($this->display('del_success'));
     }
 }

@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang=fr>
 <head>
-    <title>Média ajouté</title>
+    <title>Média supprimé</title>
     <link rel="stylesheet" href="<?=base_url();?>/styles/default/style.css">
 </head>
 <body>

@@ -2,6 +2,7 @@
 <html lang=fr>
 <head>
     <title>Page d'accueil</title>
+    <link rel="stylesheet" href="<?=base_url();?>/styles/default/style.css">
 </head>
 <body>
     <h1>Page d'accueil</h1>

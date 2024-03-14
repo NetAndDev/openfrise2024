@@ -2,6 +2,7 @@
 <html lang=fr>
 <head>
     <title>Page de détail</title>
+    <link rel="stylesheet" href="<?=base_url();?>/styles/default/style.css">
 </head>
 <body>
     <?php
@@ -44,6 +45,9 @@
             echo '<p>Date de création : '.$detail['date_create'].'</p>';
 
             echo '<p>Dernière modification : '.$detail['date_update'].'</p>';
+
+            echo '<a href="/media/upd?id_media='.$detail['id_media'].'">Modifier le média</a><br>';
+            echo '<a href="/media/del?id_media='.$detail['id_media'].'">Supprimer le média</a><br>';
         }
         else{
             echo "Cet enregistrement n'existe pas dans la table Medias.";

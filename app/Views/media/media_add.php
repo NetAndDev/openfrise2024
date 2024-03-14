@@ -2,6 +2,7 @@
 <html lang=fr>
 <head>
     <title>Ajouter un enregistrement</title>
+    <link rel="stylesheet" href="<?=base_url();?>/styles/default/style.css">
 </head>
 <body>
     <h1>Ajouter un enregistrement</h1>
