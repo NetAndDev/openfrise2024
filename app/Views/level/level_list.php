@@ -5,6 +5,8 @@
             <th>Poste</th>
             <th>|</th>
             <th>Commentaire</th>
+            <th>|</th>
+            <th>Détail</th>
         </tr>
     <?php
         if (!empty($level) && is_array($level)){
