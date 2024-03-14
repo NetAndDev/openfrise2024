@@ -59,7 +59,7 @@ class Level extends BaseController
         'date_update' => $_POST['date_update']
         ]);
 
-        return($this->view('update_sucess'));
+        return($this->view('update_success'));
         }
 
 
