@@ -1,0 +1,15 @@
+<?php
+        if (!empty($media) && is_array($media)){
+            echo "<h1>Modifier le post : ".$detail['label']."</h1>";
+            echo "<form action='update' method='POST'>";
+            echo '<input type="text" name="id_level" value="'.$detail['id_level'].'" hidden>
+                <label>Titre</label><br>
+                <input type="text" name="label" value="'.$detail['label'].'" required><br>
+                <label>Commentaire</label><br>
+                <input type="text" name="comment" value="'.$detail['comment'].'" ><br>
+                <input type="submit" Value="Envoyer">';
+        }
+        else{
+            echo "Aucun média sélectionné.";
+        }
+        ?>

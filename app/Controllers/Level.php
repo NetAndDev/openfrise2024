@@ -23,7 +23,7 @@ class Level extends BaseController
         $model = model('App\Models\LevelModel');
         $data['level'] = $model->getLevel();
 
-        if($page == 'detail'){
+        if($page == 'detail' || $page == 'update'){
             $detail = $this->request->getGet();
             $data['detail'] = $model->getLevel($detail); 
         }
