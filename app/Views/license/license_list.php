@@ -1,3 +1,4 @@
+<!doctype html>
 <head>
     <title> LISTE </title>
 </head>
@@ -9,7 +10,7 @@
 
  <table> 
 <tr>
-<th>code license</th>
+<th>code_license</th>
 <th>title</th>
 <th>filename</th>
 <th>filename_ori</th>
@@ -37,6 +38,8 @@
                     echo '<td>'.esc($item['comment']).'</td>';
                     echo '<td>'.esc($item['date_create']).'</td>';
                     echo '<td>'.esc($item['date_update']).'</td>';
+		    echo '<td><a href="detail?code_license='.esc($item['code_license']).'">Détail</a><br>
+                    <a href="update?code_license='.esc($item['code_license']).'">Modifier</a></td>';
                     echo '</tr>';
                 }
             }
@@ -47,5 +50,5 @@
     
     ?>
      </table>
-    <body>
+    </body>
 
