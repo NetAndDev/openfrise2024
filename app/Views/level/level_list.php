@@ -2,9 +2,9 @@
 
 <table>
         <tr>
-            <th>label</th>
+            <th>Poste</th>
             <th>|</th>
-            <th>Comment</th>
+            <th>Commentaire</th>
         </tr>
     <?php
         if (!empty($level) && is_array($level)){
@@ -12,9 +12,9 @@
             foreach($level as $item){
                 if(is_array($item)){
                     echo '<tr>';
-                    echo '<td>'.esc($item['poste']).'</td>';
+                    echo '<td>'.esc($item['label']).'</td>';
                     echo'<td>|</td>';
-                    echo '<td>'.esc($item['commentaire']).'</td>';
+                    echo '<td>'.esc($item['comment']).'</td>';
                     echo '</tr>';
                 }
             }
