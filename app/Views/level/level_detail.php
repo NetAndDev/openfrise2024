@@ -13,6 +13,7 @@
             echo '<p>Date de création : '.$detail['date_create'].'</p>';
 
             echo '<p>Dernière modification : '.$detail['date_update'].'</p>';
+           
             echo'<br><a href="/menu ">Menu </a>';
         }
         else{

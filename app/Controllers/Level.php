@@ -25,7 +25,8 @@ class Level extends BaseController
 
         if($page == 'detail' || $page == 'update'){
             $detail = $this->request->getGet();
-            $data['detail'] = $model->getLevel($detail); 
+            $data['detail'] = $model->getLevel($detail);    
+            
         }
 
         $data['title'] = ucfirst($page); // Capitalize the first letter
@@ -45,6 +46,18 @@ class Level extends BaseController
         ]);
 
         return($this->view('add_success'));
+        }
+
+    public function update()
+    {
+        $model = model('App\Models\LevelModel');    
+
+        $model->replace(['id_level'=> $_POST['id_level'],
+        'label' => $_POST['label'],
+        'comment' => $_POST['comment']
+        ]);
+
+        return($this->view('update_sucess'));
         }
 
 
