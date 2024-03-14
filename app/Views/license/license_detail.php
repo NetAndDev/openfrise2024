@@ -9,5 +9,9 @@
             echo '<h1>Détail de '.$detail['title'].'</h1>';
             echo '<p>la license numéro : '.$detail['codelicense'].'</p><br>';
         }
+        else{
+            echo "il y a une erreur désolé";
+        }
+
     ?>
 </body>
