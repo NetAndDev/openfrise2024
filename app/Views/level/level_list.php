@@ -23,4 +23,4 @@
             echo 'Aucun level trouvé.';
         }
     ?>
-</table>
+</table> 

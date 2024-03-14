@@ -17,4 +17,4 @@
         else{
             echo "Cet enregistrement n'existe pas dans la table Medias.";
         }
-    ?>
+    ?> 
