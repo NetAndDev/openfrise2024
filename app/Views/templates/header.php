@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>CodeIgniter Tutorial</title>
-    <link href="<?=base_url();?>styles/defautl/style.css" rel="stylesheet" <?=uniqid()?>/>
+    <link rel="stylesheet" href="<?=base_url();?>/styles/default/style.css"/>
 </head>
 <body>
     <h1><?= esc($title) ?></h1>
