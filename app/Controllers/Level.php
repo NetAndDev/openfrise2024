@@ -25,7 +25,7 @@ class Level extends BaseController
 
         if($page == 'detail'){
             $detail = $this->request->getGet();
-            $data['detail'] = $model->getMedia($detail); 
+            $data['detail'] = $model->getLevel($detail); 
         }
 
         $data['title'] = ucfirst($page); // Capitalize the first letter
