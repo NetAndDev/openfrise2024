@@ -13,9 +13,10 @@
             echo '<p>Date de création : '.$detail['date_create'].'</p>';
 
             echo '<p>Dernière modification : '.$detail['date_update'].'</p>';
+            echo'<br><a href="/menu ">Menu </a>';
         }
         else{
             echo "Cet enregistrement n'existe pas dans la table Levels.";
-            echo'<a href="/menu ">Menu </a><br>';
+            echo'<br><a href="/menu ">Menu </a>';
         }
     ?> 
