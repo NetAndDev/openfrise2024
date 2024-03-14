@@ -19,7 +19,7 @@ class EventModel extends Model
 
         }
 
-        return $this->where(['id_timeline'=> $id])->first();
+        return $this->where(['id_gallery'=> $id])->first();
     }
 
     public function getFieldsNames($field = array (0=>'*'))
