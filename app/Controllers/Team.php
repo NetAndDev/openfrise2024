@@ -29,6 +29,8 @@ class Team extends BaseController
     public function insert()
 {
         // helper('form');
+
+        
     $model = model('App\Models\TeamModel');
 
      $model->save([
@@ -36,7 +38,7 @@ class Team extends BaseController
          'comment' => $_POST['comment'],
          'date_create' => $_POST['date_create'],
          'date_update' => $_POST['date_update']
-     ]);
+     ]); // WORK
 
     return $this->display('add_success');
 }
@@ -45,13 +47,14 @@ public function update(){
 
     $model = model('App\Models\TeamModel');
 
-    $model->replace(['name' => $_POST['name'],
+    $model->replace(['id_team' => $_POST['id_team'],
+        'name' => $_POST['name'],
         'comment' => $_POST['comment'],
         'date_create' => $_POST['date_create'],
         'date_update' => $_POST['date_update']
-    ]);
+    ]); // Work
 
+    // Appelle la fonction display pour afficher la page media_update_success
     return($this->display('update_success'));
-}
-
+    }
 }

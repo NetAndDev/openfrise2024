@@ -6,14 +6,20 @@
 <body>
     <?php
         if (!empty($detail) && is_array($detail)){
+
+            if (!empty($detail['id_team'])){
+                echo '<p>Id : '.$detail['id_team'].'</p>';
+            }
+            else{
+                echo '<p>Id : Aucun id</p>';
+            }
+
             if(!empty($detail['name'])){
                 echo '<p>Name : '.$detail['name'].'</p>';
             }
             else{
                     echo '<p>Name : Aucun name</p>';
             }
-
-
             if(!empty($detail['commentaire'])){
                 echo '<p>Commentaire : '.$detail['comment'].'</p>';
             }

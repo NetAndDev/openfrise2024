@@ -7,6 +7,9 @@
     <h1>Formulaire</h1>
     <form action="insert" method="POST">
 
+         <label for="id_team">Id équipe</label>
+        <input type="text" id="id_team" name="id_team"><br>
+
         <label for="nomEquipe">Nom équipe</label>
         <input type="text" id="nomEquipe" name="name"><br>
 

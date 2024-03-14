@@ -28,23 +28,26 @@
             <th>Commentaire</th>
             <th>Date de création</th>
             <th>Date de modification</th>
+            <th>Détails</th>
         </tr>
         <?php
-       if (!empty($data_n) && is_array($data_n)) {
-        foreach ($data_n as $data) {
-            echo '<tr>';
-            echo '<td>' . $data['id_team'] . '</td>';
-            echo '<td>' . $data['name'] . '</td>';
-            echo '<td>' . $data['comment'] . '</td>';
-            echo '<td>' . $data['date_create'] . '</td>';
-            echo '<td>' . $data['date_update'] . '</td>'; 
-            echo '</tr>';
+        if (!empty($data_n) && is_array($data_n)) {
+            foreach ($data_n as $data) {
+                echo '<tr>';
+                echo '<td>' . esc($data['id_team']) . '</td>';
+                echo '<td>' . esc($data['name']) . '</td>';
+                echo '<td>' . esc($data['comment']) . '</td>';
+                echo '<td>' . esc($data['date_create']) . '</td>';
+                echo '<td>' . esc($data['date_update']) . '</td>'; 
+                echo '<td><a href="detail?id_team='.esc($data['id_team']).'">Détail</a><br>
+                        <a href="update?id_team='.esc($data['id_team']).'">Modifier</a></td>';
+                echo '</tr>';
+            }
+        } else {
+            echo '<tr><td colspan="5">Aucun enregistrement trouvé.</td></tr>';
         }
-    } else {
-        echo "<tr><td colspan='5'>Aucun enregistrement trouvé.</td></tr>";
-    }
-    ?>
-</table>
-
-</body>
-</html>
+        ?>
+    </table>
+    
+    </body>
+    </html>

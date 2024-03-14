@@ -6,6 +6,7 @@
 <body>
     <p>La Team a été Mis à jour avec succès.</p>
     <?php
+    print_r($_POST)
     ?>
 </body>
 
