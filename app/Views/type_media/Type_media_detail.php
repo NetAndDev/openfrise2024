@@ -1,42 +1,41 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="fr">
 <head>
-    <title>Détails</title>
+  <meta charset="UTF-8">
+  <title>Types de médias</title>
+  <link rel="stylesheet" href="<?= base_url(); ?>style/default/style.css">
 </head>
-
-
 <body>
-        <ul>
-        <li><a href="/type_media/link">Retour au menu</a></li>
-        <li><a href="/type_media/add">Ajouter des rôles</a></li>
-        </ul>
-    <h1>Détails</h1>
-    <a href="/type_media/list/">Liste</a>
-    <br>
-    <table>
-    <tr>
-            <th>code_type_media</th>
-            <th>Label</th>
-            <th>Icon</th>
-            <th>Comment</th>
-            <th>detail</th>
-            
-    </tr>
-    <?php
-        if (!empty($detail) && is_array($detail)){
-        
-                if(is_array($detail)){
-                    echo '<tr>';
-                    echo '<td><strong>'.esc($detail['label']).'</td>';
-                    echo '</tr>';
-                }
-        }
-        else{
-            echo "Aucun type media trouvé.";
-        }
 
-    ?>
-    </table>
-    
+  <h1>Types de médias</h1>
+
+  <div class="liste-medias">
+    <?php foreach ($chart as $media) : ?>
+      <div class="media-item">
+        <h2><?= $media['label'] ?></h2>
+        <ul>
+          <li>
+            <b>Code:</b> <?= $media['code_type_media'] ?>
+          </li>
+          <li>
+            <b>Libellé:</b> <?= $media['label'] ?>
+          </li>
+          <li>
+            <b>Icone:</b> <?= $media['icon'] ?>
+          </li>
+          <li>
+            <b>Commentaire:</b> <?= $media['comment'] ?>
+          </li>
+        </ul>
+        <a href="/type_media/link<?= esc($media['code_type_media']) ?>"> Retour au menu</a>
+        <a href="/type_media/update?<?= esc($media['code_type_media']) ?>">Modifier</a>
+        <a href="/type_media/delete?<?= esc($media['code_type_media']) ?>" class="supprimer">Supprimer</a>
+      </div>
+    <?php endforeach; ?>
+  </div>
+
+  <a href="/type_media/add" class="ajouter">Ajouter un type de média</a>
+
 </body>
 </html>
+

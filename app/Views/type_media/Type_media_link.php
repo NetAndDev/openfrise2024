@@ -2,6 +2,7 @@
 
 <html>
     <head>
+    <link rel="stylesheet" href="<?= base_url(); ?>style/default/style.css">
         <meta charset="UTF-8">
         <title></title>
     </head>

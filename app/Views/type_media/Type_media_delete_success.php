@@ -8,7 +8,7 @@
 
     </head>
     <body>
-        <h1> <strong>  Le type média a été ajouté avec succès.  </strong></h1>
+        <h1> <strong>  Le type média a été supprimer avec succès.  </strong></h1>
         
         <a href="/type_media/detail">menu </a><br>
 

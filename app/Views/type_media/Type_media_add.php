@@ -3,55 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <title>BDD TYPES MEDIAS</title>
-  <link href="../../../public/style/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="<?= base_url(); ?>style/default/style.css">
 
-  <style>
-    form {
-    width: 500px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #43B6C7; 
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  }
-
-  h1 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #FFF069; 
-    font-weight: bold;
-  }
-
-  label {
-    display: block;
-    margin-bottom: 10px;
-    color: #000000; 
-  }
-
-  input[type="text"],
- 
-  #parcourir {
-    
-    background-color: #FFFFFF; 
-    color: #000000; 
-    border: none;
-    display: inline-block;
-    padding: 8px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-
-  input[type="submit"] {
-    background-color: #FFF069;
-    color: #000000;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-  }
-  </style>
-
+  
 </head>
 <body>
     <p><a href="<?= env('app.baseURL') ?>type_media/">Menu</a></p>
