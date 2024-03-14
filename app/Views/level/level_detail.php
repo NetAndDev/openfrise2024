@@ -15,6 +15,6 @@
             echo '<p>Dernière modification : '.$detail['date_update'].'</p>';
         }
         else{
-            echo "Cet enregistrement n'existe pas dans la table Medias.";
+            echo "Cet enregistrement n'existe pas dans la table Levels.";
         }
     ?> 
