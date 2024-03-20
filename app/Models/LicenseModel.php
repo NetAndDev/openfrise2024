@@ -11,7 +11,7 @@ class LicenseModel extends Model{
  // la ligne a ajouté
  protected $allowedFields = ['title', 'filename', 'filename_ori', 'icon', 'icon_ori',
  'comment'];
-
+// voir si le probleme vient pas de code_license?
     public function getLicense($id=false){ 
 
         if($id===false){
