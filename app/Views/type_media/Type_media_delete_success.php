@@ -10,7 +10,7 @@
     <body>
         <h1> <strong>  Le type média a été supprimer avec succès.  </strong></h1>
         
-        <a href="/type_media/detail">menu </a><br>
+        <a href="/type_media/list">  Retour a la liste  </a><br>
 
 
     </body>

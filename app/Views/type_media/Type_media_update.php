@@ -9,7 +9,7 @@
     <p><a href="<?= env('app.baseURL') ?>type_media/">Menu</a></p>
 
    
-            <h1>Modifier un Type Média - <?= isset($media['label']) ? $media['label'] : '' ?></h1>
+            <h1>Modifier un Type Média - <?= isset($Typemedia['label']) ? $Typemedia['label'] : '' ?></h1>
 
 <?php if (isset($errors) && !empty($errors)): ?>
   <div class="error-message">
@@ -21,22 +21,22 @@
 
 <form action="<?= env('app.baseURL') ?>type_media/update" method="POST">
 
-  <input type="hidden" name="code_type_media" value="<?= isset($media['code_type_media']) ? $media['code_type_media'] : '' ?>">
+  <input type="hidden" name="code_type_media" value="<?= isset($Typemedia['code_type_media']) ? $Typemedia['code_type_media'] : '' ?>">
 
   <label>Code type média</label><br>
-  <input type="text" name="code_type_media" value="<?= isset($media['code_type_media']) ? $media['code_type_media'] : '' ?>" >
+  <input type="text" name="code_type_media" value="<?= isset($Typemedia['code_type_media']) ? $Typemedia['code_type_media'] : '' ?>" >
 
   <label>Libellé*</label><br>
-  <input type="text" name="label" value="<?= isset($media['label']) ? $media['label'] : '' ?>" required>
+  <input type="text" name="label" value="<?= isset($Typemedia['label']) ? $Typemedia['label'] : '' ?>" required>
 
   <label>Icone*</label><br>
-  <input type="text" name="icon" value="<?= isset($media['icon']) ? $media['icon'] : '' ?>" required>
+  <input type="text" name="icon" value="<?= isset($Typemedia['icon']) ? $Typemedia['icon'] : '' ?>" required>
 
   <label>Icone originale*</label><br>
-  <input type="text" name="icon_ori" value="<?= isset($media['icon_ori']) ? $media['icon_ori'] : '' ?>" required>
+  <input type="text" name="icon_ori" value="<?= isset($Typemedia['icon_ori']) ? $Typemedia['icon_ori'] : '' ?>" required>
 
   <label>Commentaire*</label><br>
-  <input type="text" name="comment" value="<?= isset($media['comment']) ? $media['comment'] : '' ?>" required> 
+  <input type="text" name="comment" value="<?= isset($Typemedia['comment']) ? $Typemedia['comment'] : '' ?>" required> 
 
 
 

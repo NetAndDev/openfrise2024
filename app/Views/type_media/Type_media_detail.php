@@ -27,7 +27,7 @@
             <b>Commentaire:</b> <?= $media['comment'] ?>
           </li>
         </ul>
-        <a href="/type_media/link<?= esc($media['code_type_media']) ?>"> Retour au menu</a>
+        <a href="/type_media/link?<?= esc($media['code_type_media']) ?>"> Retour au menu</a>
         <a href="/type_media/update?<?= esc($media['code_type_media']) ?>">Modifier</a>
         <a href="/type_media/delete?<?= esc($media['code_type_media']) ?>" class="supprimer">Supprimer</a>
       </div>

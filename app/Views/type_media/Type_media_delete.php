@@ -6,28 +6,18 @@
   <link rel="stylesheet" href="<?= base_url(); ?>style/default/style.css">
 </head>
 <body>
-    <p><a href="<?= base_url() ?>type_media/">Menu</a></p>
+    <p><a href="<?= env('app.baseURL') ?>type_media/">Menu</a></p>
 
-    <h1>Supprimer un Type Média</h1>
+    <h1>Supprimer un Type Média - <?= isset($Typemedia['label']) ? $Typemedia['label'] : '' ?></h1>
 
-    <?php if (isset($errors) && !empty($errors)): ?>
-        <div class="error-message">
-            <?php foreach ($errors as $field => $error): ?>
-                <p><?= $field ?> : <?= $error ?></p>
-            <?php endforeach; ?>
-        </div>
-    <?php endif; ?>
+    
 
-    <form action="<?= base_url() ?>type_media/delete" method="POST">
-        <input type="hidden" name="code_type_media" value="<?= isset($media['code_type_media']) ? $media['code_type_media'] : '' ?>">
-
-        <?php if (isset($media['label'])) : ?>
-            <p>Êtes-vous sûr de vouloir supprimer le type de média : <?= $media['label'] ?> ?</p>
-        <?php else : ?>
-            <p>Êtes-vous sûr de vouloir supprimer ce type de média ?</p>
-        <?php endif; ?>
-
-        <input type="submit" value="Supprimer">
+    <form action="<?= env('app.baseURL') ?>type_media/delete" method="POST">
+      <input type="hidden" name="code_type_media" value="<?= isset($Typemedia['code_type_media']) ? $Typemedia['code_type_media'] : '' ?>">
+      
+      <p>Êtes-vous sûr de vouloir supprimer le type média <strong><?= isset($Typemedia['label']) ? $Typemedia['label'] : '' ?></strong> ?</p>
+      
+      <input type="submit" value="Confirmer la suppression">
     </form>
 
 </body>
