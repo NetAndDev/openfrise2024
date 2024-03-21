@@ -2,24 +2,14 @@
 <html>
 <head>
     <title>Détails</title>
+    <link rel="stylesheet" href="<?=base_url();?>/styles/default/style.css">
 </head>
 
-<style>
-    th {
-
-        border: 1px solid black;
-    }
-
-    th {
-
-        padding: 5px;
-    }
-</style>
 
 <body>
         <ul>
         <li><a href="/license/menu">Retour au menu</a></li>
-        <li><a href="/license/add">Ajouter des rôles</a></li>
+        <li><a href="/license/add">Ajouter des licenses</a></li>
         </ul>
     <h1>Détails</h1>
     <a href="/license/list/">Liste</a>

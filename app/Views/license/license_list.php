@@ -1,6 +1,7 @@
 <!doctype html>
 <head>
     <title> LISTE </title>
+    <link rel="stylesheet" href="<?=base_url();?>/styles/default/style.css">
 </head>
 <body>
 

@@ -1,7 +1,8 @@
 <!doctype html>
 <html>
 <head>
-    <title>CodeIgniter Tutorial</title>
+    <title>ajouter un fichier</title>
+    <link rel="stylesheet" href="<?=base_url();?>/styles/default/style.css">
 </head>
 <body>
 <p><a href="<?= env('app.baseURL') ?>license/">Menu</a></p>

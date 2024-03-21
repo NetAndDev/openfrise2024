@@ -2,7 +2,7 @@
 <html lang=fr>
 <head>
     <title>Supprimer un enregistrement</title>
-
+    <title>ajouter un fichier</title>
 </head>
 <body>
                 <h1>Supprimer une licence</h1>
