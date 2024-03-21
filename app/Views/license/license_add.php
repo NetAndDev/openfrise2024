@@ -8,9 +8,12 @@
 <?= esc($title) ?>
     <h1>ajouter une licence</h1>
 
-    <form action="<?= env('app.baseURL') ?>license/insert" method="POST">
+<form action="<?= env('app.baseURL') ?>license/insert" method="POST">
       <label>le nom de la licence :</label>
    <input name= "license" id="license" type="text">
+
+   <label>le code de la licence :</label>
+   <input name="code_license" id="code_license" type="text" required><br>
 
    <label>le titre :</label>
    <input name="title" id="title" type="text" required><br>
