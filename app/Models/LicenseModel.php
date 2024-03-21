@@ -9,7 +9,7 @@ class LicenseModel extends Model{
     protected $table = "LICENSES";
 
  // la ligne a ajouté
- protected $allowedFields = ['title', 'filename', 'filename_ori', 'icon', 'icon_ori',
+ protected $allowedFields = ['code_license', 'title', 'filename', 'filename_ori', 'icon', 'icon_ori',
  'comment'];
 
     public function getLicense($id=false){ 

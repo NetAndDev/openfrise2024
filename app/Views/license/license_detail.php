@@ -32,6 +32,7 @@
 	<th>nom original du fichier</th>
 	<th>icon</th>
 	<th>icone d'origine</th>
+    <th>commentaire<th>
 	<th>date de création</th>
 	<th> date de modification</th>  
   </tr>
@@ -46,6 +47,7 @@
 		    echo '<td>'.esc($detail['filename_ori']).'</td>';
 		    echo '<td>'.esc($detail['icon']).'</td>';
 		    echo '<td>'.esc($detail['icon_ori']).'</td>';
+            echo '<td>'.esc($detail['comment']).'</td>';            
                     echo '<td>'.esc($detail['date_create']).'</td>';
                     echo '<td>'.esc($detail['date_update']).'</td>';
                     echo '</tr>';

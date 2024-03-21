@@ -66,5 +66,16 @@ public function insert()
     // Appelle la fonction display pour afficher la page license_update_success
     return($this->display('update_success'));
 }
+public function delete(){
+
+    $model = model('App\Models\LicenseModel');
+
+    $sql = "DELETE FROM BDD_LICENSES WHERE code_license = ?";
+
+    $model->query($sql, $_POST['code_license']);
+
+    // on utilise ensuite la ligne qui permet d'afficher la page license_delete_success
+    return($this->display('delete_success'));
+}
 
 }
