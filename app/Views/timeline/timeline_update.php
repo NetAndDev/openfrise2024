@@ -31,7 +31,7 @@
         </span><br>
              
         <label>Commentaire</label>
-        <textarea name="comment" rows= "4" cols= "55" minlength="1" maxlength="300"></textarea><br><br>
+        <textarea name="comment" rows= "4" cols= "55' minlength="1" maxlength="300"></textarea><br><br>
 
         <label>Code licence</label>
         <select name="code_licence">

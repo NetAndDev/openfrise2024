@@ -30,7 +30,7 @@ class Timeline extends BaseController
         $model = model('App\Models\TimelineModel');
         $data['timeline'] = $model->getTimeline();
 
-        if($page == 'detail'|| $page == 'update'|| $page == 'delete'){
+        if($page == 'detail'|| $page == 'update'|| $page == 'dele'){
             $detail = $this->request->getGet();
             $data['detail'] = $model->gettimeline($detail); 
         }
