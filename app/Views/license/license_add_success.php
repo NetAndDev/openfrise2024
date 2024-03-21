@@ -4,7 +4,7 @@
     <title>sucess</title>
 </head>
 <body>
-<p>congrat<p>
+<p>normalement tout est bon la licence vient d'etre ajouté merci de votre patience<p>
 <a href="/license/menu">retour au menu</a>
 </body>
 </html>

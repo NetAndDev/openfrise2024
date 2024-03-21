@@ -26,15 +26,12 @@
   <label for="myfile">Selectionnez un ficher:</label>
   <input type="file" id="myfile" name="filename_ori"><br><br>
 
-
-  <label>le nom original du fichier :</label>
-   <input name="filename_ori" id="filename_ori" type="text" required><br>
-
    <label>le nom de l'icone :</label>
    <input name="icon" id="icon" type="text" required><br>
 
-   <label>le nom original de l'icone :</label>
-   <input name="icon_ori" id="icon_ori" type="text" required><br>
+   <label for="myfile">Selectionnez une icone:</label>
+  <input type="file" id="myfile_ico" name="icon_ori"><br><br>
+
 
    <label>le commentaire </label>
    <input name="comment" id="comment" type="text" required><br>

@@ -2,32 +2,24 @@
 <html lang=fr>
 <head>
     <title>Ajouter un enregistrement</title>
+    <link rel="stylesheet" href="<?=base_url();?>/styles/default/style.css">
 </head>
 <body>
-        <?php
-        if (!empty($license) && is_array($license)){
-            echo "<h1>Modifier la license : ".$detail['label']."</h1>";
-            echo "<form action='https://ci4.championr.futaie.me/license/update_success.php' method='POST'>";
-            echo '<input type="text" name="code_license" value="'.$detail['code_license'].'" hidden>
+                <h1>Modifier le média :</h1>
+                <form action="<?= env('app.baseURL') ?>license/update" method="POST">
+                <input type="text" name="code_license" value=<?=$detail['code_license']?> hidden>
                 <label>Titre</label><br>
-                <input type="text" name="title" value="'.$detail['title'].'" required><br>
-                <label>nom du fichier</label><br>
-                <input type="text" name="filename" value="'.$detail['filename'].'" required><br>
-                <label>selectionnez le fichier</label>
+                <input type="text" name="title" value=<?=$detail['title']?> required><br>
+                <label>Nom du Fichier</label><br>
+                <input type="text" name="filename" value=<?=$detail['filename_ori']?> required><br>
+                <label> Nom du Fichier original</label><br>
                 <input type="file" name="filename_ori" accept="image/*, audio/*, video/*" required><br>
-                <label>nom original du fichier</label><br>
-                <input type="text" name="filename_ori" value="'.$detail['filename_ori'].'" required><br>
-                <label>icone<br>
-                <input type="text" name="icon" value="'.$detail['icon'].'" required><br>
-                <label>icone originale<br>
-                <input type="text" name="icon_ori" value="'.$detail['icon_ori'].'" required><br>
-                <label>Commentaire</label><br>
-                 <input type="text" name="comment" value="'.$detail['comment'].'" required><br>
-                <input type="submit" Value="Envoyer">';
-        }
-        else{
-            echo "Aucune licence sélectionné.";
-        }
-        ?>
+                <label>icone</label>
+                <input type="text" name="icon" value=<?=$detail['icon']?> required><br>
+                <label>icone_originale</label><br>
+                <input type="file" name="icon_ori" accept="image/*, audio/*, video/*" required><br>
+                <label>Commentaire</label>
+                <input type="text" name="comment" value=<?=$detail['comment']?> required><br>
+                <input type="submit" Value="Envoyer">
             </form>
         </body>
