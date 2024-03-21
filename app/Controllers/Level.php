@@ -66,9 +66,9 @@ class Level extends BaseController
     
         $sql = "DELETE FROM BDD_LEVELS WHERE id_level = ?";
 
-        $model -> query ($sql, $_POST[id_level]);
+        $model -> query ($sql, $_POST['id_level']);
     
-         return($this->view('delete_success'));
+         return($this->view('del_success'));
          }
 
 
