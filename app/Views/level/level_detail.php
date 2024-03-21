@@ -14,7 +14,12 @@
 
             echo '<p>Dernière modification : '.$detail['date_update'].'</p>';
            
-            echo'<br><a href="/menu ">Menu </a>';
+            echo'<br><a href="/menu ">Menu </a><br>';
+            echo '<a href="update?id_level='.esc($detail['id_level']).'">Modifier</a><br>';
+            ?>
+
+            <a href="<?= env('app.baseURL') ?>level/delete">Supprimer</a></p>
+<?php     
         }
         else{
             echo "Cet enregistrement n'existe pas dans la table Levels.";

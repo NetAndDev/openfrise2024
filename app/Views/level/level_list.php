@@ -14,8 +14,7 @@
                     echo '<tr>';
                     echo '<td>'.esc($item['label']).'</td>';
                     echo '<td>'.esc($item['comment']).'</td>';
-                    echo '<td><a href="detail?id_level='.esc($item['id_level']).'">Détail</a><br>
-                    <a href="update?id_level='.esc($item['id_level']).'">Modifier</a><br></td>';
+                    echo '<td><a href="detail?id_level='.esc($item['id_level']).'">Détail</a><br></td>';
                     echo '</tr>';
                 }
             }

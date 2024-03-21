@@ -60,6 +60,18 @@ class Level extends BaseController
         return($this->view('update_success'));
         }
 
+    public function delete()
+    {
+        $model = model('App\Models\LevelModel');    
+    
+        $model->delete(['id_level'=> $_POST['id_level'],
+        'label' => $_POST['label'],
+        'comment' => $_POST['comment']
+         ]);
+    
+         return($this->view('delete_success'));
+         }
+
 
 
 }
