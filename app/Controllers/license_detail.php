@@ -54,8 +54,7 @@
         else{
             echo "Aucun droit trouvé.";
         }
-        echo '<a href="/license/update?code_license='.$detail['code_license'].'">Modifier la license</a><br>';
-        echo '<a href="/license/delete?code_license='.$detail['code_license'].'">Supprimer la license</a><br>';
+
     ?>
     </table>
     
