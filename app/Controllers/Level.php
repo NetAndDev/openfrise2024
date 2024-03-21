@@ -23,7 +23,7 @@ class Level extends BaseController
         $model = model('App\Models\LevelModel');
         $data['level'] = $model->getLevel();
 
-        if($page == 'detail' || $page == 'update'){
+        if($page == 'detail' || $page == 'update' || $page == 'delete'){
             $detail = $this->request->getGet();
             $data['detail'] = $model->getLevel($detail);    
             
@@ -64,10 +64,9 @@ class Level extends BaseController
     {
         $model = model('App\Models\LevelModel');    
     
-        $model->delete(['id_level'=> $_POST['id_level'],
-        'label' => $_POST['label'],
-        'comment' => $_POST['comment']
-         ]);
+        $sql = "DELETE FROM BDD_LEVELS WHERE id_level = ?";
+
+        $model -> query ($sql, $_POST[id_level]);
     
          return($this->view('delete_success'));
          }
