@@ -27,7 +27,6 @@ if($page == 'detail'){
     $data['detail'] = $model->getLicense($detail);
 }
 
-
     return view('license/license_'.$page,$data);
 
     }
@@ -78,4 +77,18 @@ public function delete(){
     return($this->display('delete_success'));
 }
 
+        public function delete(){
+
+        $model = model('App\Models\LicenseModel');
+
+        $sql = "DELETE FROM BDD_LICENSES WHERE code_license = ?";
+
+        $model->query($sql, $_POST['code_license']);
+
+        // on utilise ensuite la ligne qui permet d'afficher la page license_delete_success(à finir demain)
+        return($this->display('del_success'));
+    }
+
+    
+    
 }
